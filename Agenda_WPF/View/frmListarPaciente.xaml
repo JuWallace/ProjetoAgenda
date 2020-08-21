@@ -1,11 +1,11 @@
-﻿<Window x:Class="Agenda_WPF.View.frmListarAgenda"
+﻿<Window x:Class="Agenda_WPF.View.frmListarPaciente"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Agenda_WPF.View"
         mc:Ignorable="d"
-        Title="frmListarAgenda" Height="720" Width="1020" WindowState="Maximized" WindowStyle="ThreeDBorderWindow">
+        Title="frmListarPaciente" Height="720" Width="1020" WindowState="Maximized" WindowStyle="ThreeDBorderWindow">
     <Grid>
         <DockPanel x:Name="mn_Principal" HorizontalAlignment="Left"  VerticalAlignment="Center" Width="160" Height="704" Background="#FF5AABFA">
             <Image Height="152" Width="160" Source="/unnamed.png" DockPanel.Dock="Top"/>
@@ -20,7 +20,7 @@
             <Button x:Name="btn_ImpressaoDeclaracao" Content="Imprimir Declaração" Height="30" VerticalAlignment="Top" Width="159.9" DockPanel.Dock="Top"/>
 
         </DockPanel>
-        <DataGrid Margin="165,299,10,80"/>
+        <DataGrid Margin="165,10,10,80"/>
 
 
 

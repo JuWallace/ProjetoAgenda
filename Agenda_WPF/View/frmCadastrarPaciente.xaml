@@ -37,23 +37,23 @@
         <Label x:Name="lb_email" Content="E-mail: " Margin="396,92,572,579"/>
         <TextBox x:Name="txtEmail" TextWrapping="Wrap" Margin="448,92,10,582" VerticalContentAlignment="Center"/>
 
-        <Label x:Name="lb_plano" Content="Plano: " Margin="165,133,805,541"/>
+        <Label x:Name="lb_plano" Content="Plano: " Margin="165,137,805,537"/>
         <ListBox x:Name="cboPlano" HorizontalAlignment="Left" Height="30" Margin="220,133,0,0" VerticalAlignment="Top" Width="140"/>
-        <Label x:Name="lb_numplano" Content="Número do Plano: " Margin="380,133,535,541"/>
+        <Label x:Name="lb_numplano" Content="Número do Plano: " Margin="380,137,535,537"/>
         <TextBox x:Name="txtNumplano" TextWrapping="Wrap" Margin="490,133,10,541" VerticalContentAlignment="Center"/>
 
         <Label x:Name="lb_rua" Content="Rua: " Margin="165,175,820,500"/>
         <TextBox x:Name="txtRua" TextWrapping="Wrap" Margin="220,175,10,500" VerticalContentAlignment="Center"/>
-        <Label x:Name="lb_numero" Content="Número: " Margin="165,218,563.6,172"/>
-        <TextBox x:Name="txtNumero" TextWrapping="Wrap" Margin="220,217.5,478.6,172.5" VerticalAlignment="Center" VerticalContentAlignment="Center" Height="30"/>
-        <Label x:Name="lb_bairro" Content="Bairro: " Margin="320,218,423.6,172" Height="30"/>
-        <TextBox x:Name="txtBairro" TextWrapping="Wrap" Margin="370,216.5,33.6,173.5" VerticalAlignment="Center" VerticalContentAlignment="Center" Height="30"/>
+        <Label x:Name="lb_numero" Content="Número: " Margin="163,221,802,454"/>
+        <TextBox x:Name="txtNumero" TextWrapping="Wrap" Margin="252,221,639,0" VerticalAlignment="Top" VerticalContentAlignment="Center" Height="29"/>
+        <Label x:Name="lb_bairro" Content="Bairro: " Margin="397,221,574,454"/>
+        <TextBox x:Name="txtBairro" TextWrapping="Wrap" Margin="448,221,10,0" VerticalAlignment="Top" VerticalContentAlignment="Center" Height="29"/>
         <Label x:Name="lb_cidade" Content="Cidade: " Margin="165,265,573.6,125"/>
-        <TextBox x:Name="txtCidade" TextWrapping="Wrap" Margin="220,265,373.6,125" VerticalAlignment="Center" VerticalContentAlignment="Center" Height="30"/>
-        <Label x:Name="lb_estado" Content="Estado: " Margin="425,265,318.6,125"/>
-        <TextBox x:Name="txtEstado" TextWrapping="Wrap" Margin="475,265,193.6,125" VerticalAlignment="Center" VerticalContentAlignment="Center" Height="30"/>
-        <Label x:Name="lb_cep" Content="CEP: " Margin="605,265,153.6,0" Height="30" VerticalAlignment="Top"/>
-        <TextBox x:Name="txtCep" TextWrapping="Wrap" Margin="645,265,33.6,125" VerticalAlignment="Center" VerticalContentAlignment="Center" Height="30"/>
+        <TextBox x:Name="txtCidade" TextWrapping="Wrap" Margin="220,265,374,0" VerticalAlignment="Top" VerticalContentAlignment="Center" Height="30"/>
+        <Label x:Name="lb_estado" Content="Estado: " Margin="425,265,535,409"/>
+        <TextBox x:Name="txtEstado" TextWrapping="Wrap" Margin="480,265,301,0" VerticalAlignment="Top" VerticalContentAlignment="Center" Height="30"/>
+        <Label x:Name="lb_cep" Content="CEP: " Margin="741,265,238,0" Height="30" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtCep" TextWrapping="Wrap" Margin="782,265,10,0" VerticalAlignment="Top" VerticalContentAlignment="Center" Height="30"/>
 
 
 

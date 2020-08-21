@@ -12,6 +12,15 @@ namespace Agenda_WPF
         {
             InitializeComponent();
         }
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            if (MessageBox.Show("Deseja fechar a janela:", "Agenda_WPF",
+                MessageBoxButton.YesNo, MessageBoxImage.Question) ==
+                MessageBoxResult.No)
+            {
+                e.Cancel = true;
+            }
+        }
 
         private void btn_CadastrarPaciente(object sender, RoutedEventArgs e)
         {
