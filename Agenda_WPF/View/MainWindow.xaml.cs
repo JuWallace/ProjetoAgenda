@@ -22,9 +22,17 @@ namespace Agenda_WPF
             }
         }
 
-        private void btn_CadastrarPaciente(object sender, RoutedEventArgs e)
+       
+
+        private void btn_CadastrarPaciente_Click(object sender, RoutedEventArgs e)
         {
             frmCadastrarPaciente frm = new frmCadastrarPaciente();
+            frm.ShowDialog();
+        }
+
+        private void btn_ListarPaciente_Click(object sender, RoutedEventArgs e)
+        {
+            frmListarPaciente frm = new frmListarPaciente();
             frm.ShowDialog();
         }
     }

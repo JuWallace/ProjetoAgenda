@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Agenda_WPF.View"
         mc:Ignorable="d"
-        Title="frmListarPaciente" Height="720" Width="1020" WindowState="Maximized" WindowStyle="ThreeDBorderWindow">
-    <Grid>
+        Title="frmListarPaciente" Height="720" Width="1020" WindowState="Minimized" WindowStyle="ThreeDBorderWindow" Loaded="Window_Loaded">
+    <Grid Loaded="Grid_Loaded">
         <DockPanel x:Name="mn_Principal" HorizontalAlignment="Left"  VerticalAlignment="Center" Width="160" Height="704" Background="#FF5AABFA">
             <Image Height="152" Width="160" Source="/unnamed.png" DockPanel.Dock="Top"/>
 
@@ -20,8 +20,16 @@
             <Button x:Name="btn_ImpressaoDeclaracao" Content="Imprimir Declaração" Height="30" VerticalAlignment="Top" Width="159.9" DockPanel.Dock="Top"/>
 
         </DockPanel>
-        <DataGrid Margin="165,10,10,80"/>
+        <DataGrid x:Name="dgDados" Margin="165,99,10,80"/>
 
+        <Label x:Name="lblNome" Content="Nome:" HorizontalAlignment="Left" Margin="165,24,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtNome" HorizontalAlignment="Left" Margin="213,24,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="797" Height="26"/>
+        <Label x:Name="lblCpf" Content="CPF:" HorizontalAlignment="Left" Margin="165,55,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtCpf"  HorizontalAlignment="Left" Margin="213,55,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="127" Height="26"/>
+        <Label x:Name="lblTelefone" Content="Telefone:" HorizontalAlignment="Left" Margin="363,55,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtTelefone"  HorizontalAlignment="Left" Margin="418,55,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="138" Height="26"/>
+        <Label x:Name="lblEmail" Content="E-mail:" HorizontalAlignment="Left" Margin="585,55,0,0" VerticalAlignment="Top" Width="50"/>
+        <TextBox x:Name="txtEmail"  HorizontalAlignment="Left" Margin="640,55,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="370" Height="26"/>
 
 
 
@@ -29,7 +37,7 @@
         <Button x:Name="btnAlterar" Content="Alterar" HorizontalAlignment="Left" Margin="380,649,0,0" VerticalAlignment="Top" Width="80"/>
         <Button x:Name="btnLocalizar" Content="Localizar" HorizontalAlignment="Left" Margin="480,649,0,0" VerticalAlignment="Top" Width="80"/>
         <Button x:Name="btnExcluir" Content="Excluir" HorizontalAlignment="Left" Margin="580,649,0,0" VerticalAlignment="Top" Width="80"/>
-        <Button x:Name="btnSalvar" Content="Salvar" HorizontalAlignment="Left" Margin="680,649,0,0" VerticalAlignment="Top" Width="80"/>
+        <Button x:Name="btnSalvar" Content="Salvar" HorizontalAlignment="Left" Margin="680,649,0,0" VerticalAlignment="Top" Width="80" Click="btnSalvar_Click"/>
         <Button x:Name="btnCancelar" Content="Cancelar" HorizontalAlignment="Left" Margin="780,649,0,0" VerticalAlignment="Top" Width="80" Click="btnCancelar_Click"/>
 
     </Grid>

@@ -4,7 +4,7 @@ namespace Agenda_WPF.Model
 {
     class Context : DbContext
     {
-        public Context() : base("DbAgendas")
+        public Context() : base("DbPacientes")
         {
 
         }

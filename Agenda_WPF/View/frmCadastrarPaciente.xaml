@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Agenda_WPF.View"
         mc:Ignorable="d"
-       Title="CadastrarPaciente" Height="720" Width="1020" WindowState="Maximized" WindowStyle="ThreeDBorderWindow">
+       Title="CadastrarPaciente" Height="720" Width="1020" WindowState="Minimized" WindowStyle="ThreeDBorderWindow">
     <Grid>
         <DockPanel x:Name="mn_Principal" HorizontalAlignment="Left"  VerticalAlignment="Center" Width="160" Height="704" Background="#FF5AABFA">
             <Image Height="152" Width="160" Source="/unnamed.png" DockPanel.Dock="Top"/>
@@ -53,7 +53,7 @@
         <Label x:Name="lb_estado" Content="Estado: " Margin="425,265,535,409"/>
         <TextBox x:Name="txtEstado" TextWrapping="Wrap" Margin="480,265,301,0" VerticalAlignment="Top" VerticalContentAlignment="Center" Height="30"/>
         <Label x:Name="lb_cep" Content="CEP: " Margin="741,265,238,0" Height="30" VerticalAlignment="Top"/>
-        <TextBox x:Name="txtCep" TextWrapping="Wrap" Margin="782,265,10,0" VerticalAlignment="Top" VerticalContentAlignment="Center" Height="30"/>
+        <TextBox x:Name="txtCep_Leave" TextWrapping="Wrap" Margin="782,265,10,0" VerticalAlignment="Top" VerticalContentAlignment="Center" Height="30"/>
 
 
 

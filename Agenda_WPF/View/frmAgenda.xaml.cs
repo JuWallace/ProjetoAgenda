@@ -7,9 +7,16 @@ namespace Agenda_WPF.View
     /// </summary>
     public partial class frmListarAgenda : Window
     {
+        private string operacao;
         public frmListarAgenda()
         {
             InitializeComponent();
+        }
+
+        private void btnCancelar_Click(object sender, RoutedEventArgs e)
+        {
+            this.operacao = "cancelar";
+           
         }
     }
 }
