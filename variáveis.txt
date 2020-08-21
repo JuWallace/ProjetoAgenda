@@ -1,0 +1,17 @@
+TELA CADASTRO PACIENTE
+txtNome
+txtCpf
+txtRg
+dtNascimento
+txtTelefone
+txtEmail
+cboPlano
+txtNumplano
+txtRua
+txtNumero
+txtBairro
+txtCidade
+txtEstado
+txtCep
+
+TELA AGENDAMENTO
