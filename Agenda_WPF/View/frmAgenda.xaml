@@ -5,8 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Agenda_WPF.View"
         mc:Ignorable="d"
-        Title="frmListarAgenda" Height="720" Width="1020" WindowState="Minimized" WindowStyle="ThreeDBorderWindow">
+        Title="frmListarAgenda" Height="720" Width="1020" WindowState="Minimized" WindowStyle="ThreeDBorderWindow" Loaded="Window_Loaded">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="11*"/>
+            <ColumnDefinition Width="6*"/>
+        </Grid.ColumnDefinitions>
         <DockPanel x:Name="mn_Principal" HorizontalAlignment="Left"  VerticalAlignment="Center" Width="160" Height="704" Background="#FF5AABFA">
             <Image Height="152" Width="160" Source="/unnamed.png" DockPanel.Dock="Top"/>
 
@@ -28,25 +32,30 @@
         <Button x:Name="btnAlterar" Content="Alterar" HorizontalAlignment="Left" Margin="380,649,0,0" VerticalAlignment="Top" Width="80"/>
         <Button x:Name="btnLocalizar" Content="Localizar" HorizontalAlignment="Left" Margin="480,649,0,0" VerticalAlignment="Top" Width="80"/>
         <Button x:Name="btnExcluir" Content="Excluir" HorizontalAlignment="Left" Margin="580,649,0,0" VerticalAlignment="Top" Width="80"/>
-        <Button x:Name="btnSalvar" Content="Salvar" HorizontalAlignment="Left" Margin="680,649,0,0" VerticalAlignment="Top" Width="80"/>
-        <Button x:Name="btnCancelar" Content="Cancelar" HorizontalAlignment="Left" Margin="780,649,0,0" VerticalAlignment="Top" Width="80" Click="btnCancelar_Click"/>
-        <ListView Margin="165,114,10,180">
+        <Button x:Name="btnSalvar" Content="Salvar" HorizontalAlignment="Left" Margin="20,649,0,0" VerticalAlignment="Top" Width="80" Grid.Column="1"/>
+        <Button x:Name="btnCancelar" Content="Cancelar" HorizontalAlignment="Left" Margin="120,649,0,0" VerticalAlignment="Top" Width="80" Click="btnCancelar_Click" Grid.Column="1"/>
+        <ListView Margin="165,139,10,204" SelectionChanged="ListView_SelectionChanged" Height="361" Grid.ColumnSpan="2">
             <ListView.View>
                 <GridView>
                     <GridViewColumn/>
                 </GridView>
             </ListView.View>
+            <Calendar/>
         </ListView>
         <Label x:Name="lblNome" Content="Nome:" HorizontalAlignment="Left" Margin="355,24,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="txtNome" HorizontalAlignment="Left" Margin="403,24,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="607" Height="26"/>
+        <TextBox x:Name="txtNome" HorizontalAlignment="Left" Margin="403,24,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="607" Height="26" Grid.ColumnSpan="2"/>
         <Label x:Name="lblIdPaciente" Content="Id: " HorizontalAlignment="Left" Margin="167,24,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="txtIdPaciente" HorizontalAlignment="Left" Margin="198,24,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="130" Height="26"/>
-        <Label x:Name="lblCpf" Content="CPF:" HorizontalAlignment="Left" Margin="165,55,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="txtCpf"  HorizontalAlignment="Left" Margin="213,55,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="127" Height="26"/>
-        <Label x:Name="lblTelefone" Content="Telefone:" HorizontalAlignment="Left" Margin="363,55,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="txtTelefone"  HorizontalAlignment="Left" Margin="418,55,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="138" Height="26"/>
-        <Label x:Name="lblEmail" Content="E-mail:" HorizontalAlignment="Left" Margin="585,55,0,0" VerticalAlignment="Top" Width="50"/>
-        <TextBox x:Name="txtEmail"  HorizontalAlignment="Left" Margin="640,55,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="370" Height="26"/>
+        <Label x:Name="lblCpf" Content="CPF:" HorizontalAlignment="Left" Margin="165,62,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtCpf"  HorizontalAlignment="Left" Margin="213,62,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="127" Height="26"/>
+        <Label x:Name="lblTelefone" Content="Telefone:" HorizontalAlignment="Left" Margin="363,62,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtTelefone"  HorizontalAlignment="Left" Margin="418,62,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="138" Height="26"/>
+        <Label x:Name="lblEmail" Content="E-mail:" HorizontalAlignment="Left" Margin="585,62,0,0" VerticalAlignment="Top" Width="50"/>
+        <TextBox x:Name="txtEmail"  HorizontalAlignment="Left" Margin="640,62,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="370" Height="26" Grid.ColumnSpan="2"/>
+
+        <Label x:Name="lb_medico" Content="Médico: " Margin="167,98,388,576" Height="30"/>
+        <ListBox x:Name="cboMedico" HorizontalAlignment="Left" Height="30" Margin="225,98,0,0" VerticalAlignment="Top" Width="331" RenderTransformOrigin="0.571,0.301"/>
+
 
     </Grid>
 </Window>

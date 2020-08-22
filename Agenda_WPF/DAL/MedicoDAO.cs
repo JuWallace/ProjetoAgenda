@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Agenda_WPF.Model;
+using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace Agenda_WPF.DAL
@@ -12,7 +14,7 @@ namespace Agenda_WPF.DAL
         {
             if (BuscarMedicoPorNome(m) == null)
             {
-                ctx.Agendas.Add(m);
+                ctx.Medicos.Add(m);
                 ctx.SaveChanges();
                 return true;
             }
@@ -23,7 +25,7 @@ namespace Agenda_WPF.DAL
 
         public static Medico BuscarMedicoPorNome(Medico m)
         {
-            return ctx.Medicos.FirstOrDefault(x => x.Nome.Equals(m.Nome));
+            return ctx.Medicos.FirstOrDefault(x => x.NomeMedico.Equals(m.NomeMedico));
         }
 
 
@@ -32,7 +34,7 @@ namespace Agenda_WPF.DAL
             return ctx.Medicos.Find(id);
         }
 
-        public static List<Medico> ListarMedico()
+        public static List<Medico> ListarMedicos()
         {
             //return ctx.Produtos.FirstOrDefault( x => x.ProdutoId == id);    
             return ctx.Medicos.ToList();

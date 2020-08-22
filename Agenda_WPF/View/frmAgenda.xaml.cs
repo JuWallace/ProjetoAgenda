@@ -1,4 +1,8 @@
-﻿using System.Windows;
+﻿using Agenda_WPF.DAL;
+using Agenda_WPF.Model;
+using System.Collections.Generic;
+using System.Windows;
+using System.Windows.Documents;
 
 namespace Agenda_WPF.View
 {
@@ -8,6 +12,9 @@ namespace Agenda_WPF.View
     public partial class frmListarAgenda : Window
     {
         private string operacao;
+        List<Paciente> pacientes = new List<Paciente>();
+        List<Medico> medicos = new List<Medico>();
+       
         public frmListarAgenda()
         {
             InitializeComponent();
@@ -84,5 +91,14 @@ namespace Agenda_WPF.View
             this.operacao = "inserir";
             this.AlteraBotoes(2);
         }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+          
+            cboMedico.ItemsSource = MedicoDAO.ListarMedicos();
+            cboMedico.DisplayMemberPath = "Medico";
+            cboMedico.SelectedValuePath = "IdMedico";
+        }
     }
+    
 }

@@ -19,6 +19,8 @@ namespace Agenda_WPF.Model
         public Paciente Nome { get; set; }
         public Paciente Cpf { get; set; }
         public Paciente Plano { get; set; }
+        public Medico NomeMedico { get; set; }
+        public Medico Especialidade { get; set; }
 
         public DateTime DataAgendada { get; set; }
 
@@ -29,7 +31,7 @@ namespace Agenda_WPF.Model
 
         public override string ToString()
         {
-            return "Agenda: " + Nome + "\t| CPF: " + Cpf + "\t| Plano: " + Plano + "\t| Data: " + DataAgendada;
+            return "Agenda: " + Nome + "\t| CPF: " + Cpf + "\t| Plano: " + Plano + "\t| Medico: " + NomeMedico + "\t| Especialidade: " + Especialidade;
         }
     }
 }
