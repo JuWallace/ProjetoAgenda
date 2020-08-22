@@ -6,12 +6,12 @@ using System.Windows;
 namespace Agenda_WPF.View
 {
     /// <summary>
-    /// Interaction logic for frmCadastrarPaciente.xaml
+    /// Interaction logic for frmCadastrarMedico.xaml
     /// </summary>
-    public partial class frmCadastrarPaciente : Window
+    public partial class frmCadastrarMedico : Window
     {
         private string operacao;
-        public frmCadastrarPaciente()
+        public frmCadastrarMedico()
         {
             InitializeComponent();
         }
@@ -22,58 +22,38 @@ namespace Agenda_WPF.View
 
             txtNome.IsEnabled = true;
             txtCpf.IsEnabled = true;
-            txtRg.IsEnabled = true;
-            dtNascimento.IsEnabled = true;
+            txtCrm.IsEnabled = true;
             txtTelefone.IsEnabled = true;
             txtEmail.IsEnabled = true;
-            cboPlano.IsEnabled = true;
-            txtNumplano.IsEnabled = true;
-            txtRua.IsEnabled = true;
-            txtNumero.IsEnabled = true;
-            txtBairro.IsEnabled = true;
-            txtCidade.IsEnabled = true;
-            txtEstado.IsEnabled = true;
-            txtCep_Leave.IsEnabled = true;
+            txtEspecialidade.IsEnabled = true;
+
 
             txtNome.Clear();
             txtCpf.Clear();
-            txtRg.Clear();
-            dtNascimento.Clear();
+            txtCrm.Clear();
             txtTelefone.Clear();
             txtEmail.Clear();
+            txtEspecialidade.Clear();
 
-            txtNumplano.Clear();
-            txtRua.Clear();
-            txtNumero.Clear();
-            txtBairro.Clear();
-            txtCidade.Clear();
-            txtEstado.Clear();
-            txtCep_Leave.Clear();
+        
         }
         private void btnSalvar_Click(object sender, RoutedEventArgs e)
         {
             using (Context ctx = new Context())
             {
-                Paciente p = new Paciente();
-                p.Nome = txtNome.Text;
-                p.Cpf = txtCpf.Text;
-                p.Rg = txtRg.Text;
-                p.Nascimento = dtNascimento.Text;
-                p.Telefone = txtTelefone.Text;
-                p.Email = txtEmail.Text;
-                p.NumPlano = txtNumplano.Text;
-                p.Rua = txtRua.Text;
-                p.Numero = txtNumero.Text;
-                p.Bairro = txtBairro.Text;
-                p.Cidade = txtCidade.Text;
-                p.Estado = txtEstado.Text;
-                p.Cep = txtCep_Leave.Text;
+                Medico m = new Medico();
+                m.NomeMedico = txtNome.Text;
+                m.Cpf = txtCpf.Text;
+                m.Crm = txtCrm.Text;
+                m.Telefone = txtTelefone.Text;
+                m.Email = txtEmail.Text;
+                m.Especialidade = txtEspecialidade.Text;
 
                 if (operacao == "inserir")
                 {
                     Context context = new Context();
                     {
-                        context.Pacientes.Add(p);
+                        context.Medicos.Add(m);
                         context.SaveChanges();
                     }
 
@@ -81,7 +61,7 @@ namespace Agenda_WPF.View
                 if (operacao == "alterar")
                 {
                     {
-                        ctx.Pacientes.Add(p);
+                        ctx.Medicos.Add(m);
                         ctx.SaveChanges();
                     }
                 }
@@ -142,33 +122,7 @@ namespace Agenda_WPF.View
             }
         }
 
-        private void textCep_Leave(object sender, EventArgs e)
-        {
-            LocalizarCEP();
-        }
-
-        private void LocalizarCEP()
-        {
-            if (!string.IsNullOrWhiteSpace(txtCep_Leave.Text))
-            {
-                Address endereco = SearchZip.GetAddress(txtCep_Leave.Text);
-                if (endereco.Zip != null)
-                {
-                    txtEstado.Text = endereco.State;
-                    txtCidade.Text = endereco.City;
-                    txtBairro.Text = endereco.District;
-                    txtRua.Text = endereco.Street;
-                }
-                else
-                {
-                    MessageBox.Show("Cep não localizado...");
-                }
-            }
-            else
-            {
-                MessageBox.Show("Informe um CEP válido");
-            }
-        }
+           
 
         private void btnCancelar_Click(object sender, RoutedEventArgs e)
         {

@@ -22,7 +22,7 @@ namespace Agenda_WPF
             }
         }
 
-       
+
 
         private void btn_CadastrarPaciente_Click(object sender, RoutedEventArgs e)
         {

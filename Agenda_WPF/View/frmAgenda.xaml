@@ -20,7 +20,6 @@
             <Button x:Name="btn_ImpressaoDeclaracao" Content="Imprimir Declaração" Height="30" VerticalAlignment="Top" Width="159.9" DockPanel.Dock="Top"/>
 
         </DockPanel>
-        <DataGrid Margin="165,299,10,80"/>
 
 
 
@@ -31,6 +30,23 @@
         <Button x:Name="btnExcluir" Content="Excluir" HorizontalAlignment="Left" Margin="580,649,0,0" VerticalAlignment="Top" Width="80"/>
         <Button x:Name="btnSalvar" Content="Salvar" HorizontalAlignment="Left" Margin="680,649,0,0" VerticalAlignment="Top" Width="80"/>
         <Button x:Name="btnCancelar" Content="Cancelar" HorizontalAlignment="Left" Margin="780,649,0,0" VerticalAlignment="Top" Width="80" Click="btnCancelar_Click"/>
+        <ListView Margin="165,114,10,180">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Label x:Name="lblNome" Content="Nome:" HorizontalAlignment="Left" Margin="355,24,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtNome" HorizontalAlignment="Left" Margin="403,24,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="607" Height="26"/>
+        <Label x:Name="lblIdPaciente" Content="Id: " HorizontalAlignment="Left" Margin="167,24,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtIdPaciente" HorizontalAlignment="Left" Margin="198,24,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="130" Height="26"/>
+        <Label x:Name="lblCpf" Content="CPF:" HorizontalAlignment="Left" Margin="165,55,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtCpf"  HorizontalAlignment="Left" Margin="213,55,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="127" Height="26"/>
+        <Label x:Name="lblTelefone" Content="Telefone:" HorizontalAlignment="Left" Margin="363,55,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtTelefone"  HorizontalAlignment="Left" Margin="418,55,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="138" Height="26"/>
+        <Label x:Name="lblEmail" Content="E-mail:" HorizontalAlignment="Left" Margin="585,55,0,0" VerticalAlignment="Top" Width="50"/>
+        <TextBox x:Name="txtEmail"  HorizontalAlignment="Left" Margin="640,55,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="370" Height="26"/>
 
     </Grid>
 </Window>

@@ -1,17 +1,6 @@
 ﻿using Agenda_WPF.Model;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.InteropServices.ComTypes;
-using System.Text;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace Agenda_WPF.View
 {
@@ -35,10 +24,10 @@ namespace Agenda_WPF.View
             p.Email = txtEmail.Text;
             using (Context ctx = new Context())
             {
-              
+
                 if (operacao == "inserir")
                 {
-                   
+
                     {
                         ctx.Pacientes.Add(p);
                         ctx.SaveChanges();
@@ -46,7 +35,7 @@ namespace Agenda_WPF.View
                 }
                 if (operacao == "alterar")
                 {
-                    
+
                     {
                         ctx.Pacientes.Add(p);
                         ctx.SaveChanges();
@@ -102,23 +91,30 @@ namespace Agenda_WPF.View
         }
         private void LimpaCampos()
         {
-
+            txtIdPaciente.IsEnabled = true;  
             txtNome.IsEnabled = true;
             txtCpf.IsEnabled = true;
             txtTelefone.IsEnabled = true;
             txtEmail.IsEnabled = true;
-           
+
             txtNome.Clear();
             txtCpf.Clear();
             txtTelefone.Clear();
             txtEmail.Clear();
 
-            
+
         }
 
         private void btnCancelar_Click(object sender, RoutedEventArgs e)
         {
-            this.operacao = "cancelar";
+            this.AlteraBotoes(1);
+            this.LimpaCampos();
+        }
+
+        private void btnInserir_Click(object sender, RoutedEventArgs e)
+        {
+            this.operacao = "inserir";
+            this.AlteraBotoes(2);
         }
     }
 }

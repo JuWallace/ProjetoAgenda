@@ -5,8 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Agenda_WPF.View"
         mc:Ignorable="d"
-       Title="CadastrarPaciente" Height="720" Width="1020" WindowState="Minimized" WindowStyle="ThreeDBorderWindow">
+       Title="CadastrarPaciente" Height="720" Width="1020" WindowState="Minimized" WindowStyle="ThreeDBorderWindow" KeyDown="Window_KeyDown">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
         <DockPanel x:Name="mn_Principal" HorizontalAlignment="Left"  VerticalAlignment="Center" Width="160" Height="704" Background="#FF5AABFA">
             <Image Height="152" Width="160" Source="/unnamed.png" DockPanel.Dock="Top"/>
 
@@ -48,7 +51,7 @@
         <TextBox x:Name="txtNumero" TextWrapping="Wrap" Margin="252,221,639,0" VerticalAlignment="Top" VerticalContentAlignment="Center" Height="29"/>
         <Label x:Name="lb_bairro" Content="Bairro: " Margin="397,221,574,454"/>
         <TextBox x:Name="txtBairro" TextWrapping="Wrap" Margin="448,221,10,0" VerticalAlignment="Top" VerticalContentAlignment="Center" Height="29"/>
-        <Label x:Name="lb_cidade" Content="Cidade: " Margin="165,265,573.6,125"/>
+        <Label x:Name="lb_cidade" Content="Cidade: " Margin="165,265,574,125"/>
         <TextBox x:Name="txtCidade" TextWrapping="Wrap" Margin="220,265,374,0" VerticalAlignment="Top" VerticalContentAlignment="Center" Height="30"/>
         <Label x:Name="lb_estado" Content="Estado: " Margin="425,265,535,409"/>
         <TextBox x:Name="txtEstado" TextWrapping="Wrap" Margin="480,265,301,0" VerticalAlignment="Top" VerticalContentAlignment="Center" Height="30"/>

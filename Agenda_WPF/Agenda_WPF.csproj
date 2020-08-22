@@ -19,4 +19,16 @@
     <Resource Include="unnamed.png" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Update="View\frmCadastrarMedico.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="View\frmCadastrarMedico.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+
 </Project>
