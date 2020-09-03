@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Agenda_WPF.View"
         mc:Ignorable="d"
-       Title="CadastrarPaciente" Height="720" Width="1020" WindowState="Minimized" WindowStyle="ThreeDBorderWindow" KeyDown="Window_KeyDown">
+       Title="CadastrarPaciente" Height="720" Width="1020" WindowState="Minimized" WindowStyle="ThreeDBorderWindow">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
