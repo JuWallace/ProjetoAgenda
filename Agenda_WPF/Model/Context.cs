@@ -10,14 +10,22 @@ using System.Threading.Tasks;
 namespace Agenda_WPF.Model
 {
 
-    class Context : System.Data.Entity.DbContext
+    class Context : DbContext
     {
         public Context() : base("DbAgenda_WPF") { }
         
-        public System.Data.Entity.DbSet<Paciente> Pacientes { get; set; }
-        public System.Data.Entity.DbSet<Agenda> Agendas { get; set; }
-        public System.Data.Entity.DbSet<Medico> Medicos { get; set; }
-        public System.Data.Entity.DbSet<Usuario> Usuarios { get; set; }
+        public DbSet<Paciente> Pacientes { get; set; }
+        public DbSet<Agenda> Agendas { get; set; }
+        public DbSet<Medico> Medicos { get; set; }
+        public DbSet<Usuario> Usuarios { get; set; }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+
+            optionsBuilder.UseSqlServer(@"Server=(localdb)\MSSQLLocalDB;
+                                           Database=PessoasDb;
+                                            Trusted_Connection=true");
+        }
     }
     }
   

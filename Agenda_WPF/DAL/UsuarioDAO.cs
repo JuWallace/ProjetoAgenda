@@ -25,13 +25,13 @@ namespace Agenda_WPF.DAL
 
         public static Usuario BuscarUsuario(Usuario u)
         {
-            return ctx.Usuarios.FirstOrDefault(x => x.TipoUsuario.Equals(u.Us));
+            return ctx.Usuarios.FirstOrDefault(x => x.TipoUsuario.Equals(u.TipoUsuario));
         }
 
 
-        public static Usuario BuscarUsuarioPorId(int IdUsuario)
+        public static Usuario BuscarUsuarioPorId(int id)
         {
-            return ctx.Usuarios.Find(IdUsuario);
+            return ctx.Usuarios.Find(id);
         }
 
      
