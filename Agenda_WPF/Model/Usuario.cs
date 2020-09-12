@@ -16,7 +16,6 @@ namespace Agenda_WPF.Model
         [Key]
         public int IdUsuario { get; set; }
         public string TipoUsuario { get; set; }
-       
         public DateTime CriadoEm { get; set; }
 
         public override string ToString()

@@ -99,6 +99,11 @@ namespace Agenda_WPF.View
             cboMedico.DisplayMemberPath = "Medico";
             cboMedico.SelectedValuePath = "IdMedico";
         }
+
+        private void btn_Fechar_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
     
 }

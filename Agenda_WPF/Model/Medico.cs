@@ -9,10 +9,8 @@ namespace Agenda_WPF.Model
     [Table("Medicos")]
     class Medico
     {
-        public Medico()
-        {
-            CriadoEm = DateTime.Now; // não funciona caso não tenha sido inserido a data.
-        }
+        public Medico() => CriadoEm = DateTime.Now; // não funciona caso não tenha sido inserido a data.
+
         [Key]
         public int IdMedico { get; set; }
         public string NomeMedico { get; set; }

@@ -35,5 +35,10 @@ namespace Agenda_WPF
             frmListarPaciente frm = new frmListarPaciente();
             frm.ShowDialog();
         }
+
+        private void btn_EncerrarSistema_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

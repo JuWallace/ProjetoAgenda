@@ -21,5 +21,15 @@ namespace Agenda_WPF.View
         {
             InitializeComponent();
         }
+
+        private void btn_Fechar_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btn_ImpressaoDeclaracao_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

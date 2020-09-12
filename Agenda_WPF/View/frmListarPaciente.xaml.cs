@@ -116,5 +116,10 @@ namespace Agenda_WPF.View
             this.operacao = "inserir";
             this.AlteraBotoes(2);
         }
+
+        private void btn_Fechar_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }
