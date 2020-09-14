@@ -22,7 +22,13 @@ namespace Agenda_WPF.View
             InitializeComponent();
         }
 
-        private void btn_Fechar_Click(object sender, RoutedEventArgs e)
+        public frmTelaPrincipalRecepcionista(string AteLogin)
+        {
+            InitializeComponent();
+            lblAteLogado.Content = $"Seja bem vindo(a) {AteLogin}!";
+        }
+
+        private void btnSair_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
         }

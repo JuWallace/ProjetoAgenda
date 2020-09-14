@@ -12,6 +12,12 @@ namespace Agenda_WPF
         {
             InitializeComponent();
         }
+        public MainWindow(string UsrLogin)
+        {
+            InitializeComponent();
+            lblUsrLogado.Content = $"Seja bem vindo(a) {UsrLogin}!";
+        }
+
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
             if (MessageBox.Show("Deseja fechar a janela:", "Agenda_WPF",
@@ -39,6 +45,12 @@ namespace Agenda_WPF
         private void btn_EncerrarSistema_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+
+        private void btn_CadastrarUsuario_Click(object sender, RoutedEventArgs e)
+        {
+            frmCadastrarUsuario CadUsuario = new frmCadastrarUsuario();
+            CadUsuario.Show();
         }
     }
 }

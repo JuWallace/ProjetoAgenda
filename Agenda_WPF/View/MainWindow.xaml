@@ -3,13 +3,15 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        WindowStartupLocation="CenterScreen"
         xmlns:local="clr-namespace:Agenda_WPF"
         mc:Ignorable="d"
-           Title="Consultório Médico - AGENDA" Height="720" Width="1020" WindowState="Minimized" WindowStyle="ThreeDBorderWindow">
+           Title="Consultório Médico - AGENDA" Height="720" Width="1020">
     <Grid>
         <DockPanel x:Name="mn_Principal" HorizontalAlignment="Left"  VerticalAlignment="Center" Width="160" Height="704" Background="#FF5AABFA">
             <Image Height="152" Width="160" Source="/unnamed.png" DockPanel.Dock="Top"/>
 
+            <Button x:Name="btn_CadastrarUsuario" Content="Cadastrar Usuário" Height="30" VerticalAlignment="Top" Width="159.9" DockPanel.Dock="Top" Click="btn_CadastrarUsuario_Click"/>
             <Button x:Name="btn_CadastrarPaciente" Content="Cadastrar Paciente" Height="30" VerticalAlignment="Top" Width="159.9" DockPanel.Dock="Top" Click="btn_CadastrarPaciente_Click"/>
             <Button x:Name="btn_AgendarConsulta" Content="Agendar Consulta" Height="30" VerticalAlignment="Top" Width="159.9" DockPanel.Dock="Top"/>
             <Button x:Name="btn_ListarPaciente" Content="Listar Paciente" Height="30" VerticalAlignment="Top" Width="159.9" DockPanel.Dock="Top" Click="btn_ListarPaciente_Click"/>
@@ -21,9 +23,10 @@
             <Button x:Name="btn_EncerrarSistema" Content="Encerrar Sistema" Height="30" VerticalAlignment="Top" Width="159.9" DockPanel.Dock="Top" Click="btn_EncerrarSistema_Click"/>
 
         </DockPanel>
+        <Label Name="lblUsrLogado" Content="" HorizontalAlignment="Left" Margin="190,10,0,0" VerticalAlignment="Top" Height="23"/>
 
-       
-        
+
+
 
 
 

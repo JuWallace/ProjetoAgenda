@@ -22,9 +22,20 @@ namespace Agenda_WPF.View
             InitializeComponent();
         }
 
-        private void btn_Fechar_Click(object sender, RoutedEventArgs e)
+        public frmTelaPrincipalMedico(string MedLogin)
+        {
+            InitializeComponent();
+            lblMedLogado.Content = $"Seja bem vindo(a) {MedLogin}!";
+        }
+
+        private void btnSair_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+
+        private void btn_ImpressaoDeclaracao_Click(object sender, RoutedEventArgs e)
+        {
+
         }
 
     }

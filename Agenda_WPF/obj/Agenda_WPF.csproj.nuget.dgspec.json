@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Repos_GitHub\\ProjetoAgenda\\Agenda_WPF\\Agenda_WPF.csproj": {}
+    "D:\\BKP_PEN_FACUL\\repos\\Wpf\\ProjetoAgenda_Dario\\Agenda_WPF\\Agenda_WPF.csproj": {}
   },
   "projects": {
-    "D:\\Repos_GitHub\\ProjetoAgenda\\Agenda_WPF\\Agenda_WPF.csproj": {
+    "D:\\BKP_PEN_FACUL\\repos\\Wpf\\ProjetoAgenda_Dario\\Agenda_WPF\\Agenda_WPF.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Repos_GitHub\\ProjetoAgenda\\Agenda_WPF\\Agenda_WPF.csproj",
+        "projectUniqueName": "D:\\BKP_PEN_FACUL\\repos\\Wpf\\ProjetoAgenda_Dario\\Agenda_WPF\\Agenda_WPF.csproj",
         "projectName": "Agenda_WPF",
-        "projectPath": "D:\\Repos_GitHub\\ProjetoAgenda\\Agenda_WPF\\Agenda_WPF.csproj",
+        "projectPath": "D:\\BKP_PEN_FACUL\\repos\\Wpf\\ProjetoAgenda_Dario\\Agenda_WPF\\Agenda_WPF.csproj",
         "packagesPath": "C:\\Users\\Wallace\\.nuget\\packages\\",
-        "outputPath": "D:\\Repos_GitHub\\ProjetoAgenda\\Agenda_WPF\\obj\\",
+        "outputPath": "D:\\BKP_PEN_FACUL\\repos\\Wpf\\ProjetoAgenda_Dario\\Agenda_WPF\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

@@ -7,7 +7,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="View\frmCadastrarPaciente1.xaml.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove="unnamed.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Remove="View\frmCadastrarPaciente1.xaml" />
   </ItemGroup>
 
   <ItemGroup>

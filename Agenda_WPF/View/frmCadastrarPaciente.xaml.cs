@@ -15,19 +15,17 @@ namespace Agenda_WPF.View
         {
             InitializeComponent();
         }
-
         
         private void LimpaCampos()
         {
-
             txtNome.IsEnabled = true;
             txtCpf.IsEnabled = true;
             txtRg.IsEnabled = true;
-            dtNascimento.IsEnabled = true;
+            txtDtaNascimento.IsEnabled = true;
             txtTelefone.IsEnabled = true;
             txtEmail.IsEnabled = true;
             cboPlano.IsEnabled = true;
-            txtNumplano.IsEnabled = true;
+            txtNPlano.IsEnabled = true;
             txtRua.IsEnabled = true;
             txtNumero.IsEnabled = true;
             txtBairro.IsEnabled = true;
@@ -38,11 +36,11 @@ namespace Agenda_WPF.View
             txtNome.Clear();
             txtCpf.Clear();
             txtRg.Clear();
-            dtNascimento.Clear();
+            txtDtaNascimento.Clear();
             txtTelefone.Clear();
             txtEmail.Clear();
 
-            txtNumplano.Clear();
+            txtNPlano.Clear();
             txtRua.Clear();
             txtNumero.Clear();
             txtBairro.Clear();
@@ -58,10 +56,10 @@ namespace Agenda_WPF.View
                 p.Nome = txtNome.Text;
                 p.Cpf = txtCpf.Text;
                 p.Rg = txtRg.Text;
-                p.Nascimento = dtNascimento.Text;
+                p.Nascimento = txtDtaNascimento.Text;
                 p.Telefone = txtTelefone.Text;
                 p.Email = txtEmail.Text;
-                p.NumPlano = txtNumplano.Text;
+                p.NumPlano = txtNPlano.Text;
                 p.Rua = txtRua.Text;
                 p.Numero = txtNumero.Text;
                 p.Bairro = txtBairro.Text;
@@ -176,7 +174,10 @@ namespace Agenda_WPF.View
             this.LimpaCampos();
         }
 
-    
+        private void btnSair_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 
 }

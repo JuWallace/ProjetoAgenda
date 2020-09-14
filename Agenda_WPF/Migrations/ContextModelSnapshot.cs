@@ -151,18 +151,36 @@ namespace Agenda_WPF.Migrations
 
             modelBuilder.Entity("Agenda_WPF.Model.Usuario", b =>
                 {
-                    b.Property<int>("IdUsuario")
+                    b.Property<int>("UsuarioID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<bool>("Administrador")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("Atendente")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Cpf")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<DateTime>("CriadoEm")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("TipoUsuario")
+                    b.Property<string>("Email")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("IdUsuario");
+                    b.Property<bool>("Medico")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Nome")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Senha")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("UsuarioID");
 
                     b.ToTable("Usuarios");
                 });
