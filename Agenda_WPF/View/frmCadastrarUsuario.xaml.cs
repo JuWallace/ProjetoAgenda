@@ -24,7 +24,7 @@ namespace Agenda_WPF.View
             btnBuscarUsuario.IsEnabled = true;
             btnEditar.IsEnabled = false;
             btnExcluir.IsEnabled = false;
-            btnSairUsuario.IsEnabled = true;
+            btn_Fechar.IsEnabled = true;
 
             txtNomeUsuario.Clear();
             txtCpfUsuario.Clear();
@@ -80,15 +80,15 @@ namespace Agenda_WPF.View
             }
         }
 
-        private void btnSairUsuario_Click(object sender, RoutedEventArgs e)
-        {
-            this.Close();
-        }
-
         private void btnBuscarUsuario_Click(object sender, RoutedEventArgs e)
         {
             frmListarUsuario listarUsuarios = new frmListarUsuario();
             listarUsuarios.Show();
+        }
+
+        private void btnFechar_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

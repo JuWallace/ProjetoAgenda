@@ -28,7 +28,17 @@ namespace Agenda_WPF
             }
         }
 
+        private void btn_CadastrarUsuario_Click(object sender, RoutedEventArgs e)
+        {
+            frmCadastrarUsuario CadUsuario = new frmCadastrarUsuario();
+            CadUsuario.Show();
+        }
 
+        private void btn_CadastrarMedico_Click(object sender, RoutedEventArgs e)
+        {
+            frmCadastrarMedico CadMedico = new frmCadastrarMedico();
+            CadMedico.Show();
+        }
 
         private void btn_CadastrarPaciente_Click(object sender, RoutedEventArgs e)
         {
@@ -45,12 +55,6 @@ namespace Agenda_WPF
         private void btn_EncerrarSistema_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
-        }
-
-        private void btn_CadastrarUsuario_Click(object sender, RoutedEventArgs e)
-        {
-            frmCadastrarUsuario CadUsuario = new frmCadastrarUsuario();
-            CadUsuario.Show();
         }
     }
 }

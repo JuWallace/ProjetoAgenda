@@ -129,7 +129,10 @@ namespace Agenda_WPF.View
             this.LimpaCampos();
         }
 
-    
+        private void btn_Fechar_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 
 }

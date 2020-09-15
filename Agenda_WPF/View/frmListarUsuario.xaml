@@ -6,15 +6,30 @@
         WindowStartupLocation="CenterScreen"
         xmlns:local="clr-namespace:Agenda_WPF.View"
         mc:Ignorable="d"
-        Title="frmListarUsuario" Height="600" Width="1000">
+        Title="Listar Usuarios - AGENDA" Height="620" Width="1020">
     <Grid>
-        <Image HorizontalAlignment="Left" Height="144" Width="160" Source="/unnamed.png" Margin="10,10,0,415" />
-        <Label Name="lblFiltro" Content="Seleciono ao tipo de busca e insira abaixo:" HorizontalAlignment="Left" Margin="573,67,0,0" VerticalAlignment="Top"/>
+        <DockPanel Name="mn_Principal" HorizontalAlignment="Left"  VerticalAlignment="Center" Width="180" Height="600" Background="#FF5AABFA">
+            <Image Name="imgAngio" Source="/unnamed.png"  DockPanel.Dock="Top"/>
+
+            <Button x:Name="btn_CadastrarUsuario" Content="Cadastrar Usuário" Height="30" DockPanel.Dock="Top" Click="btn_CadastrarUsuario_Click"/>
+            <Button x:Name="btn_CadastrarMedico" Content="Cadastrar Médico" Height="30" DockPanel.Dock="Top" Click="btn_CadastrarMedico_Click"/>
+            <Button x:Name="btn_CadastrarPaciente" Content="Cadastrar Paciente" Height="30" DockPanel.Dock="Top" Click="btn_CadastrarPaciente_Click"/>
+            <Button x:Name="btn_AgendarConsulta" Content="Agendar Consulta" Height="30" DockPanel.Dock="Top"/>
+            <Button x:Name="btn_ListarPaciente" Content="Listar Paciente" Height="30" DockPanel.Dock="Top" Click="btn_ListarPaciente_Click"/>
+            <Button x:Name="btn_ListarConsulta" Content="Listar Consulta" Height="30" DockPanel.Dock="Top"/>
+
+            <Button x:Name="btn_AlterarPaciente" Content="Atualizar Dados Paciente" Height="30" DockPanel.Dock="Top"/>
+            <Button x:Name="btn_AlterarAgendamento" Content="Alterar Agendamento" Height="30" DockPanel.Dock="Top"/>
+            <Button x:Name="btn_ImpressaoDeclaracao" Content="Imprimir Declaração" Height="30" DockPanel.Dock="Top"/>
+            <Button x:Name="btn_EncerrarSistema" Content="Encerrar Sistema" Height="30" DockPanel.Dock="Top" Click="btn_EncerrarSistema_Click"/>
+
+        </DockPanel>
+        
+        <Label Name="lblFiltro" Content="Selecione um tipo de busca e insira abaixo:" HorizontalAlignment="Left" Margin="573,67,0,0" VerticalAlignment="Top"/>
         <RadioButton Name="rdoCpf" Content="CPF" HorizontalAlignment="Left" Margin="495,58,0,0" VerticalAlignment="Top"/>
         <RadioButton Name="rdoEmail" Content="E-MAIL" HorizontalAlignment="Left" Margin="495,78,0,0" VerticalAlignment="Top"/>
         <RadioButton Name="rdoNome" Content="NOME" HorizontalAlignment="Left" Margin="495,100,0,0" VerticalAlignment="Top"/>
         <DataGrid Name="dtgListaUsuarios" HorizontalAlignment="Left" Height="249" Margin="206,130,0,0" VerticalAlignment="Top" Width="760"/>
-        <Button Name="btnSairListar" Content="Sair" HorizontalAlignment="Left" Margin="10,336,0,0" VerticalAlignment="Top" Width="113" Click="btnSairListar_Click"/>
         <TextBox Name="txtFiltro" HorizontalAlignment="Left" Height="23" Margin="573,94,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="307"/>
         <Button x:Name="btnFiltrar" Content="Filtrar" HorizontalAlignment="Left" Margin="887,94,0,0" VerticalAlignment="Top" Width="75" Click="btnFiltrar_Click" Height="23"/>
     </Grid>

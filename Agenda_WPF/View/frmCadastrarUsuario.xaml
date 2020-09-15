@@ -6,14 +6,24 @@
         WindowStartupLocation="CenterScreen"
         xmlns:local="clr-namespace:Agenda_WPF.View"
         mc:Ignorable="d"
-        Title="frmCadastrarUsuario" Height="450" Width="800">
+        Title="Cadastrar Usuário - AGENDA" Height="720" Width="1020">
     <Grid>
-        <Image HorizontalAlignment="Left" Height="144" Width="160" Source="/unnamed.png" Margin="10,10,0,280" />
+        <DockPanel x:Name="mn_Principal" HorizontalAlignment="Left"  VerticalAlignment="Center" Width="160" Height="704" Background="#FF5AABFA">
+            <Image Source="/unnamed.png" DockPanel.Dock="Top"/>
+            <Button x:Name="btn_AgendarConsulta" Content="Agendar Consulta" Height="30" DockPanel.Dock="Top"/>
+            <Button x:Name="btn_ListarPaciente" Content="Listar Paciente" Height="30" DockPanel.Dock="Top"/>
+            <Button x:Name="btn_ListarConsulta" Content="Listar Consulta" Height="30" VerticalAlignment="Top" Width="159.9" DockPanel.Dock="Top"/>
+
+            <Button Name="btn_AlterarPaciente" Content="Atualizar Dados Paciente" Height="30" DockPanel.Dock="Top"/>
+            <Button Name="btn_AlterarAgendamento" Content="Alterar Agendamento" Height="30" DockPanel.Dock="Top"/>
+            <Button Name="btn_ImpressaoDeclaracao" Content="Imprimir Declaração" Height="30" VerticalAlignment="Top" Width="159.9" DockPanel.Dock="Top"/>
+            <Button Name="btn_Fechar" Content="Fechar" Height="30" DockPanel.Dock="Top" Click="btnFechar_Click"/>
+        </DockPanel>
+        
         <Button Name="btnCadastrar" Content="Cadastrar" HorizontalAlignment="Left" Margin="213,261,0,0" VerticalAlignment="Top" Width="75" Click="btnCadastrar_Click"/>
         <Button Name="btnBuscarUsuario" Content="Buscar" HorizontalAlignment="Left" Margin="305,261,0,0" VerticalAlignment="Top" Width="75" Click="btnBuscarUsuario_Click"/>
         <Button Name="btnEditar" Content="Editar" HorizontalAlignment="Left" Margin="400,261,0,0" VerticalAlignment="Top" Width="76"/>
         <Button Name="btnExcluir" Content="Excluir" HorizontalAlignment="Left" Margin="501,261,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button Name="btnSairUsuario" Content="Sair" HorizontalAlignment="Left" Margin="591,261,0,0" VerticalAlignment="Top" Width="75" Click="btnSairUsuario_Click"/>
         <Label Name="lblNomeUsuario" Content="Nome:" HorizontalAlignment="Left" Margin="204,25,0,0" VerticalAlignment="Top"/>
         <Label Name="lblCpfUsuario" Content="CPF:" HorizontalAlignment="Left" Margin="204,57,0,0" VerticalAlignment="Top"/>
         <Label Name="lblEmailUsuario" Content="Email:" HorizontalAlignment="Left" Margin="204,83,0,0" VerticalAlignment="Top"/>
