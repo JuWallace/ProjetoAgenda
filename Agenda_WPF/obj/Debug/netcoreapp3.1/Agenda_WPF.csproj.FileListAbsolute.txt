@@ -17,7 +17,6 @@ D:\Repos_GitHub\ProjetoAgenda\Agenda_WPF\bin\Debug\netcoreapp3.1\Agenda_WPF.runt
 D:\Repos_GitHub\ProjetoAgenda\Agenda_WPF\bin\Debug\netcoreapp3.1\Agenda_WPF.runtimeconfig.dev.json
 D:\Repos_GitHub\ProjetoAgenda\Agenda_WPF\bin\Debug\netcoreapp3.1\Agenda_WPF.dll
 D:\Repos_GitHub\ProjetoAgenda\Agenda_WPF\bin\Debug\netcoreapp3.1\Agenda_WPF.pdb
-D:\Repos_GitHub\ProjetoAgenda\Agenda_WPF\bin\Debug\netcoreapp3.1\Correios.Net.dll
 D:\Repos_GitHub\ProjetoAgenda\Agenda_WPF\bin\Debug\netcoreapp3.1\MaterialDesignColors.dll
 D:\Repos_GitHub\ProjetoAgenda\Agenda_WPF\bin\Debug\netcoreapp3.1\MaterialDesignThemes.Wpf.dll
 D:\Repos_GitHub\ProjetoAgenda\Agenda_WPF\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
@@ -70,7 +69,6 @@ D:\Repos_GitHub\ProjetoAgenda\Agenda_WPF\obj\Debug\netcoreapp3.1\View\MainWindow
 D:\Repos_GitHub\ProjetoAgenda\Agenda_WPF\obj\Debug\netcoreapp3.1\Agenda_WPF.g.resources
 D:\Repos_GitHub\ProjetoAgenda\Agenda_WPF\obj\Debug\netcoreapp3.1\Agenda_WPF.AssemblyInfoInputs.cache
 D:\Repos_GitHub\ProjetoAgenda\Agenda_WPF\obj\Debug\netcoreapp3.1\Agenda_WPF.AssemblyInfo.cs
-D:\Repos_GitHub\ProjetoAgenda\Agenda_WPF\obj\Debug\netcoreapp3.1\Agenda_WPF.csproj.CoreCompileInputs.cache
 D:\Repos_GitHub\ProjetoAgenda\Agenda_WPF\obj\Debug\netcoreapp3.1\Agenda_WPF.csproj.CopyComplete
 D:\Repos_GitHub\ProjetoAgenda\Agenda_WPF\obj\Debug\netcoreapp3.1\Agenda_WPF.dll
 D:\Repos_GitHub\ProjetoAgenda\Agenda_WPF\obj\Debug\netcoreapp3.1\Agenda_WPF.pdb
@@ -156,3 +154,10 @@ D:\BKP_PEN_FACUL\repos\Wpf\ProjetoAgenda_Dario\Agenda_WPF\obj\Debug\netcoreapp3.
 D:\BKP_PEN_FACUL\repos\Wpf\ProjetoAgenda_Dario\Agenda_WPF\obj\Debug\netcoreapp3.1\Agenda_WPF.csproj.CoreCompileInputs.cache
 D:\BKP_PEN_FACUL\repos\Wpf\ProjetoAgenda_Dario\Agenda_WPF\obj\Debug\netcoreapp3.1\Agenda_WPF.csproj.CopyComplete
 D:\BKP_PEN_FACUL\repos\Wpf\ProjetoAgenda_Dario\Agenda_WPF\obj\Debug\netcoreapp3.1\Agenda_WPF.genruntimeconfig.cache
+D:\Repos_GitHub\ProjetoAgenda\Agenda_WPF\obj\Debug\netcoreapp3.1\View\frmCadastrarUsuario.g.cs
+D:\Repos_GitHub\ProjetoAgenda\Agenda_WPF\obj\Debug\netcoreapp3.1\View\frmListarUsuario.g.cs
+D:\Repos_GitHub\ProjetoAgenda\Agenda_WPF\obj\Debug\netcoreapp3.1\View\frmCadastrarUsuario.baml
+D:\Repos_GitHub\ProjetoAgenda\Agenda_WPF\obj\Debug\netcoreapp3.1\View\frmListarUsuario.baml
+D:\Repos_GitHub\ProjetoAgenda\Agenda_WPF\obj\Debug\netcoreapp3.1\Agenda_WPF.csproj.ResolveComReference.cache
+D:\Repos_GitHub\ProjetoAgenda\Agenda_WPF\obj\Debug\netcoreapp3.1\Agenda_WPF.csproj.CoreCompileInputs.cache
+D:\Repos_GitHub\ProjetoAgenda\Agenda_WPF\bin\Debug\netcoreapp3.1\RestSharp.dll

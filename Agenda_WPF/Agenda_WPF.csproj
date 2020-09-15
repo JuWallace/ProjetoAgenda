@@ -19,13 +19,22 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Correios.CEP.Net" Version="1.1.6" />
+    <COMReference Include="{4fb2d46f-efc8-4643-bcd0-6e5bfa6a174c}">
+      <Guid>4fb2d46f-efc8-4643-bcd0-6e5bfa6a174c</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>4</VersionMinor>
+      <WrapperTool>tlbimp</WrapperTool>
+    </COMReference>
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="MaterialDesignThemes" Version="3.1.3" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.8" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.8">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="RestSharp" Version="106.11.4" />
   </ItemGroup>
 
   <ItemGroup>

@@ -17,8 +17,6 @@ namespace Agenda_WPF.DAL
                 return true;
             }
             return false;
-
-
         }
 
         public static Paciente BuscarPacientePorNome(Paciente p)

@@ -1,5 +1,4 @@
 ﻿using Agenda_WPF.Model;
-using Correios.Net;
 using System;
 using System.Windows;
 

@@ -17,6 +17,7 @@ namespace Agenda_WPF.Model
         public string Nascimento { get; set; }
         public string Telefone { get; set; }
         public string Email { get; set; }
+        public string NomePlano { get; set; }
         public string NumPlano { get; set; }
         public string Rua { get; set; }
         public string Numero { get; set; }

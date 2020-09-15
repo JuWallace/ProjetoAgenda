@@ -2,15 +2,6 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v3.1": {
-      "Correios.CEP.Net/1.1.6": {
-        "type": "package",
-        "compile": {
-          "lib/Correios.Net.dll": {}
-        },
-        "runtime": {
-          "lib/Correios.Net.dll": {}
-        }
-      },
       "MaterialDesignColors/1.2.6": {
         "type": "package",
         "compile": {
@@ -472,6 +463,15 @@
         },
         "runtime": {
           "lib/netstandard1.3/Newtonsoft.Json.dll": {}
+        }
+      },
+      "RestSharp/106.11.4": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/RestSharp.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/RestSharp.dll": {}
         }
       },
       "runtime.native.System/4.3.0": {
@@ -1532,19 +1532,6 @@
     }
   },
   "libraries": {
-    "Correios.CEP.Net/1.1.6": {
-      "sha512": "5xiGLVdvGxlG5SnOYHusZnAyveuxVQaqTkW002iV7sFeWZlhzxaUUE/ghjhnr+dh6ic+HauYnY9zGcg74fzH2Q==",
-      "type": "package",
-      "path": "correios.cep.net/1.1.6",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "correios.cep.net.1.1.6.nupkg.sha512",
-        "correios.cep.net.nuspec",
-        "lib/Correios.Net.dll",
-        "lib/Correios.Net.pdb"
-      ]
-    },
     "MaterialDesignColors/1.2.6": {
       "sha512": "3x9k3T0wUxIGg5C1D6JQQXw/N549eHhIsiyF791VjgK+8sZU8ywpFaZwbd0KArQJiFJ7Ud14Vgl/63E6O86EFw==",
       "type": "package",
@@ -2298,6 +2285,22 @@
         "newtonsoft.json.10.0.1.nupkg.sha512",
         "newtonsoft.json.nuspec",
         "tools/install.ps1"
+      ]
+    },
+    "RestSharp/106.11.4": {
+      "sha512": "vx35q52cM3UQNOiN3UqSQ9U7I5UeoyzVmjsWKQxOxn6FVu+n01+SNwhxc/jvf92WPBmmwzTV4VYTeTg4KviJdA==",
+      "type": "package",
+      "path": "restsharp/106.11.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net452/RestSharp.dll",
+        "lib/net452/RestSharp.xml",
+        "lib/netstandard2.0/RestSharp.dll",
+        "lib/netstandard2.0/RestSharp.xml",
+        "restsharp.106.11.4.nupkg.sha512",
+        "restsharp.nuspec",
+        "restsharp.png"
       ]
     },
     "runtime.native.System/4.3.0": {
@@ -5762,10 +5765,10 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "Correios.CEP.Net >= 1.1.6",
       "MaterialDesignThemes >= 3.1.3",
       "Microsoft.EntityFrameworkCore.SqlServer >= 3.1.8",
-      "Microsoft.EntityFrameworkCore.Tools >= 3.1.8"
+      "Microsoft.EntityFrameworkCore.Tools >= 3.1.8",
+      "RestSharp >= 106.11.4"
     ]
   },
   "packageFolders": {
@@ -5775,11 +5778,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\BKP_PEN_FACUL\\repos\\Wpf\\ProjetoAgenda_Dario\\Agenda_WPF\\Agenda_WPF.csproj",
+      "projectUniqueName": "D:\\Repos_GitHub\\ProjetoAgenda\\Agenda_WPF\\Agenda_WPF.csproj",
       "projectName": "Agenda_WPF",
-      "projectPath": "D:\\BKP_PEN_FACUL\\repos\\Wpf\\ProjetoAgenda_Dario\\Agenda_WPF\\Agenda_WPF.csproj",
+      "projectPath": "D:\\Repos_GitHub\\ProjetoAgenda\\Agenda_WPF\\Agenda_WPF.csproj",
       "packagesPath": "C:\\Users\\Wallace\\.nuget\\packages\\",
-      "outputPath": "D:\\BKP_PEN_FACUL\\repos\\Wpf\\ProjetoAgenda_Dario\\Agenda_WPF\\obj\\",
+      "outputPath": "D:\\Repos_GitHub\\ProjetoAgenda\\Agenda_WPF\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -5809,10 +5812,6 @@
     "frameworks": {
       "netcoreapp3.1": {
         "dependencies": {
-          "Correios.CEP.Net": {
-            "target": "Package",
-            "version": "[1.1.6, )"
-          },
           "MaterialDesignThemes": {
             "target": "Package",
             "version": "[3.1.3, )"
@@ -5826,6 +5825,10 @@
             "suppressParent": "All",
             "target": "Package",
             "version": "[3.1.8, )"
+          },
+          "RestSharp": {
+            "target": "Package",
+            "version": "[106.11.4, )"
           }
         },
         "imports": [
@@ -5849,17 +5852,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'Correios.CEP.Net 1.1.6' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
-      "libraryId": "Correios.CEP.Net",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v3.1"
-      ]
-    }
-  ]
+  }
 }
