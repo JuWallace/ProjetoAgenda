@@ -56,5 +56,17 @@ namespace Agenda_WPF
         {
             this.Close();
         }
+
+        private void btn_ListarUsuario_Click(object sender, RoutedEventArgs e)
+        {
+            frmListarUsuario listarUsuario = new frmListarUsuario();
+            listarUsuario.Show();
+        }
+
+        private void btn_ListarMedico_Click(object sender, RoutedEventArgs e)
+        {
+            //frmListarMedico listarMedico = new frmListarMedico();
+            //listarMedico.Show();
+        }
     }
 }

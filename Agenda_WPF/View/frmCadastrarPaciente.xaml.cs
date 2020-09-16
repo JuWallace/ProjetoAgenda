@@ -16,6 +16,7 @@ namespace Agenda_WPF.View
         public frmCadastrarPaciente()
         {
             InitializeComponent();
+            LimpaCampos();
             LoadCboPlano();
             txtNome.Focus();
         }
@@ -30,20 +31,11 @@ namespace Agenda_WPF.View
         
         private void LimpaCampos()
         {
-            txtNome.IsEnabled = true;
-            txtCpf.IsEnabled = true;
-            txtRg.IsEnabled = true;
-            txtDtaNascimento.IsEnabled = true;
-            txtTelefone.IsEnabled = true;
-            txtEmail.IsEnabled = true;
-            cboPlano.IsEnabled = true;
-            txtNPlano.IsEnabled = true;
-            txtRua.IsEnabled = true;
-            txtNumero.IsEnabled = true;
-            txtBairro.IsEnabled = true;
-            txtCidade.IsEnabled = true;
-            txtEstado.IsEnabled = true;
-            txtCep_Leave.IsEnabled = true;
+            btnCadastrar.IsEnabled = true;
+            btnAlterar.IsEnabled = false;
+            btnLocalizar.IsEnabled = true;
+            btnExcluir.IsEnabled = false;
+            btnFechar.IsEnabled = true;
 
             txtNome.Clear();
             txtCpf.Clear();
@@ -61,7 +53,7 @@ namespace Agenda_WPF.View
             txtCep_Leave.Clear();
         }
 
-        private void btnInserir_Click(object sender, RoutedEventArgs e)
+        private void btnCadastrar_Click(object sender, RoutedEventArgs e)
         {
             //this.operacao = "inserir";
             //this.AlteraBotoes(2);
@@ -205,9 +197,21 @@ namespace Agenda_WPF.View
         }
 
 
-        private void btn_Fechar_Click(object sender, RoutedEventArgs e)
+        private void btnFechar_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+
+        private void btnCadastrarPaciente_Click(object sender, RoutedEventArgs e)
+        {
+            frmCadastrarPaciente cadastrarPaciente = new frmCadastrarPaciente();
+            cadastrarPaciente.Show();
+        }
+
+        private void btnListarPaciente_Click(object sender, RoutedEventArgs e)
+        {
+            frmListarPaciente listarPaciente = new frmListarPaciente();
+            listarPaciente.Show();
         }
     }
 

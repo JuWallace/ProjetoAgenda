@@ -21,10 +21,10 @@ namespace Agenda_WPF.View
         private void LimpaCampos()
         {
             btnCadastrar.IsEnabled = true;
-            btnBuscarUsuario.IsEnabled = true;
-            btnEditar.IsEnabled = false;
+            btnAlterar.IsEnabled = false;
+            btnLocalizar.IsEnabled = true;
             btnExcluir.IsEnabled = false;
-            btn_Fechar.IsEnabled = true;
+            btnFechar.IsEnabled = true;
 
             txtNomeUsuario.Clear();
             txtCpfUsuario.Clear();
@@ -89,6 +89,38 @@ namespace Agenda_WPF.View
         private void btnFechar_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+
+        private void btnCadastrarPaciente_Click(object sender, RoutedEventArgs e)
+        {
+            frmCadastrarPaciente cadastrarPaciente = new frmCadastrarPaciente();
+            cadastrarPaciente.Show();
+        }
+
+        private void btnListarPaciente_Click(object sender, RoutedEventArgs e)
+        {
+            frmListarPaciente listarPaciente = new frmListarPaciente();
+            listarPaciente.Show();
+        }
+
+        private void btnCancelar_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnAlterar_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnLocalizar_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnExcluir_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

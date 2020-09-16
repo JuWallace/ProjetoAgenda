@@ -55,5 +55,64 @@ namespace Agenda_WPF.View
                 MessageBox.Show("Por favor selecione um tipo de filtro!!");
             }
         }
+
+        private void btn_CadastrarUsuario_Click(object sender, RoutedEventArgs e)
+        {
+            frmCadastrarUsuario CadUsuario = new frmCadastrarUsuario();
+            CadUsuario.Show();
+        }
+
+        private void btn_CadastrarMedico_Click(object sender, RoutedEventArgs e)
+        {
+            frmCadastrarMedico CadMedico = new frmCadastrarMedico();
+            CadMedico.Show();
+        }
+
+        private void btn_CadastrarPaciente_Click(object sender, RoutedEventArgs e)
+        {
+            frmCadastrarPaciente frm = new frmCadastrarPaciente();
+            frm.ShowDialog();
+        }
+
+        private void btn_Fechar_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btn_ListarPaciente_Click(object sender, RoutedEventArgs e)
+        {
+            frmListarPaciente frm = new frmListarPaciente();
+            frm.ShowDialog();
+        }
+
+        private void btnAlterar_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnLocalizar_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnExcluir_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnFechar_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnCadastrar_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnCancelar_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
