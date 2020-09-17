@@ -189,7 +189,7 @@ namespace Agenda_WPF.View
             txtEstado.Text = cepRetorno.uf;
         }
 
- 
+
         private void btnCancelar_Click(object sender, RoutedEventArgs e)
         {
             //this.AlteraBotoes(1);

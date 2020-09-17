@@ -25,7 +25,7 @@ namespace Agenda_WPF.DAL
 
         public static Medico BuscarMedicoPorNome(Medico m)
         {
-            return ctx.Medicos.FirstOrDefault(x => x.NomeMedico.Equals(m.NomeMedico));
+            return ctx.Medicos.FirstOrDefault(x => x.Nome.Equals(m.Nome));
         }
 
 

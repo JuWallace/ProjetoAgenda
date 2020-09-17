@@ -7,8 +7,9 @@ namespace Agenda_WPF.DAL
 {
     class UsuarioDAO
     {
-        private static Context ctx = SingletonContext.GetInstance();
+        //private static Context ctx = SingletonContext.GetInstance();
         //private static List<Usuario> usuarios = new List<Usuario>();
+        private static Context ctx = new Context();
 
         public static List<Usuario> ListarUsuarios()
         {

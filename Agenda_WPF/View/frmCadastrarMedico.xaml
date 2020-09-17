@@ -36,7 +36,7 @@
         <Label Name="lblEmail" Content="E-MAIL:" HorizontalAlignment="Left" Margin="458,149,0,0" VerticalAlignment="Top"/>
         <TextBox Name="txtEmail" HorizontalAlignment="Left" Margin="510,149,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="306"/>
         
-        <Button Name="btnCadastrar" Content="Cadastrar" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="270,629,0,0" VerticalAlignment="Top" Width="95" Click="btnInserir_Click"/>
+        <Button Name="btnCadastrar" Content="Cadastrar" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="270,629,0,0" VerticalAlignment="Top" Width="95" Click="btnCadastrar_Click"/>
         <Button Name="btnAlterar" Content="Alterar" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="375,629,0,0" VerticalAlignment="Top" Width="95"/>
         <Button Name="btnLocalizar" Content="Localizar" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="480,629,0,0" VerticalAlignment="Top" Width="95"/>
         <Button Name="btnExcluir" Content="Excluir" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="586,629,0,0" VerticalAlignment="Top" Width="95"/>

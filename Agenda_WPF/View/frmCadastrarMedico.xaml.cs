@@ -41,7 +41,7 @@ namespace Agenda_WPF.View
             using (Context ctx = new Context())
             {
                 Medico m = new Medico();
-                m.NomeMedico = txtNome.Text;
+                m.Nome = txtNome.Text;
                 m.Cpf = txtCpf.Text;
                 m.Crm = txtCrm.Text;
                 m.Telefone = txtTelefone.Text;
@@ -72,14 +72,15 @@ namespace Agenda_WPF.View
 
 
         }
-        private void btnInserir_Click(object sender, RoutedEventArgs e)
+        private void btnCadastrar_Click(object sender, RoutedEventArgs e)
         {
             //this.operacao = "inserir";
             //this.AlteraBotoes(2);
-            Context ctx = new Context();
+            //Context ctx = new Context();
             Medico med = new Medico();
+            //Pessoa med = new Pessoa();
 
-            med.NomeMedico = txtNome.Text;
+            med.Nome = txtNome.Text;
             med.Cpf = txtCpf.Text;
             med.Crm = txtCrm.Text;
             med.Especialidade = txtEspecialidade.Text;
@@ -170,6 +171,7 @@ namespace Agenda_WPF.View
             frmListarPaciente listarPaciente = new frmListarPaciente();
             listarPaciente.Show();
         }
+
     }
 
 }
