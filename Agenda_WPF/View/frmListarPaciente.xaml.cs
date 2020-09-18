@@ -59,7 +59,11 @@ namespace Agenda_WPF.View
             Context ctx = new Context();
             {
                 var consulta = ctx.Pacientes;
-                dgDados.ItemsSource = consulta.ToList();
+                dtgPacientes.ItemsSource = consulta.ToList();
+
+                //dtgPacientes.Columns[0].Header = "id";
+                //dtgPacientes.Columns[1].Header = "Nome";
+
             }
         }
         private void AlteraBotoes(int op)
@@ -131,5 +135,8 @@ namespace Agenda_WPF.View
             frmListarPaciente listarPaciente = new frmListarPaciente();
             listarPaciente.Show();
         }
+
+
+
     }
 }

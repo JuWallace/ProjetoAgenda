@@ -7,7 +7,7 @@ namespace Agenda_WPF.Model
     [Table("Pacientes")]
     class Paciente : Pessoa
     {
-        public Paciente() => CriadoEm = DateTime.Now; // não funciona caso não tenha sido inserido a data.
+        public Paciente() => CriadoEm = DateTime.Now;
 
         [Key]
         public int IdPaciente { get; set; }
@@ -27,11 +27,10 @@ namespace Agenda_WPF.Model
         //public string Cep { get; set; }
         public DateTime CriadoEm { get; set; }
 
-
-
         public override string ToString()
         {
-            return "Produto: " + Nome + "\t| CPF: " + Cpf + "\t| RG: " + Rg;
+            return $"Nome: {Nome} | CPF: {Cpf} | RG: {Rg} | Nascimento: {Nascimento} | Telefone: {Telefone} | " +
+                   $"E-Mail: {Email} | Plano: {NomePlano} | Nº Plano: {NumPlano} | ";
         }
     }
 }

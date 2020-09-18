@@ -8,13 +8,73 @@
     ".NETCoreApp,Version=v3.1": {
       "Agenda_WPF/1.0.0": {
         "dependencies": {
+          "Extended.Wpf.Toolkit": "4.0.1",
           "MaterialDesignThemes": "3.1.3",
           "Microsoft.EntityFrameworkCore.SqlServer": "3.1.8",
           "Microsoft.EntityFrameworkCore.Tools": "3.1.8",
-          "RestSharp": "106.11.4"
+          "RestSharp": "106.11.5"
         },
         "runtime": {
           "Agenda_WPF.dll": {}
+        }
+      },
+      "Extended.Wpf.Toolkit/4.0.1": {
+        "runtime": {
+          "lib/net40/Xceed.Wpf.AvalonDock.Themes.Aero.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.0.0.0"
+          },
+          "lib/net40/Xceed.Wpf.AvalonDock.Themes.Metro.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.0.0.0"
+          },
+          "lib/net40/Xceed.Wpf.AvalonDock.Themes.VS2010.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.0.0.0"
+          },
+          "lib/net40/Xceed.Wpf.AvalonDock.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.0.0.0"
+          },
+          "lib/net40/Xceed.Wpf.Toolkit.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.0.0.0"
+          }
+        },
+        "resources": {
+          "lib/net40/cs-CZ/Xceed.Wpf.AvalonDock.resources.dll": {
+            "locale": "cs-CZ"
+          },
+          "lib/net40/de/Xceed.Wpf.AvalonDock.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net40/es/Xceed.Wpf.AvalonDock.resources.dll": {
+            "locale": "es"
+          },
+          "lib/net40/fr/Xceed.Wpf.AvalonDock.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net40/hu/Xceed.Wpf.AvalonDock.resources.dll": {
+            "locale": "hu"
+          },
+          "lib/net40/it/Xceed.Wpf.AvalonDock.resources.dll": {
+            "locale": "it"
+          },
+          "lib/net40/pt-BR/Xceed.Wpf.AvalonDock.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "lib/net40/ro/Xceed.Wpf.AvalonDock.resources.dll": {
+            "locale": "ro"
+          },
+          "lib/net40/ru/Xceed.Wpf.AvalonDock.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/net40/sv/Xceed.Wpf.AvalonDock.resources.dll": {
+            "locale": "sv"
+          },
+          "lib/net40/zh-Hans/Xceed.Wpf.AvalonDock.resources.dll": {
+            "locale": "zh-Hans"
+          }
         }
       },
       "MaterialDesignColors/1.2.6": {
@@ -394,11 +454,11 @@
           }
         }
       },
-      "RestSharp/106.11.4": {
+      "RestSharp/106.11.5": {
         "runtime": {
           "lib/netstandard2.0/RestSharp.dll": {
-            "assemblyVersion": "106.11.4.0",
-            "fileVersion": "106.11.4.0"
+            "assemblyVersion": "106.8.10.0",
+            "fileVersion": "106.8.10.0"
           }
         }
       },
@@ -1042,6 +1102,13 @@
       "serviceable": false,
       "sha512": ""
     },
+    "Extended.Wpf.Toolkit/4.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-K8BoXvwokEJTiVkOH4L8FGeWaT0TptzgXJsFI/FlfPA1TSzhgNcrHJtxDFecAYwHNU3wnUjSGZ/YMq5gR5TGag==",
+      "path": "extended.wpf.toolkit/4.0.1",
+      "hashPath": "extended.wpf.toolkit.4.0.1.nupkg.sha512"
+    },
     "MaterialDesignColors/1.2.6": {
       "type": "package",
       "serviceable": true,
@@ -1280,12 +1347,12 @@
       "path": "newtonsoft.json/10.0.1",
       "hashPath": "newtonsoft.json.10.0.1.nupkg.sha512"
     },
-    "RestSharp/106.11.4": {
+    "RestSharp/106.11.5": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-vx35q52cM3UQNOiN3UqSQ9U7I5UeoyzVmjsWKQxOxn6FVu+n01+SNwhxc/jvf92WPBmmwzTV4VYTeTg4KviJdA==",
-      "path": "restsharp/106.11.4",
-      "hashPath": "restsharp.106.11.4.nupkg.sha512"
+      "sha512": "sha512-/DgzFdYoUcWGIsspNG1AvxdTcCxbrItgAQLW30by5AQ6jhnC46WgOK5B38UFIHYJNm7+YIWM+rdEMyXSrdO6Jw==",
+      "path": "restsharp/106.11.5",
+      "hashPath": "restsharp.106.11.5.nupkg.sha512"
     },
     "runtime.native.System/4.3.0": {
       "type": "package",

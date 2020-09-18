@@ -11,7 +11,7 @@ namespace Agenda_WPF.View
     /// </summary>
     public partial class frmListarUsuario : Window
     {
-        Context ctx = SingletonContext.GetInstance();
+        Context ctx = new Context();
         public frmListarUsuario()
         {
             InitializeComponent();

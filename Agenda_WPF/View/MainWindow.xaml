@@ -21,18 +21,18 @@
         <DockPanel Name="mn_Principal" HorizontalAlignment="Left"  VerticalAlignment="Center" Width="190" Height="704" Background="#FF5AABFA">
             <Image Name="imgAngio" Source="/unnamed.png"  DockPanel.Dock="Top"/>
 
-            <Button Name="btnCadastrarUsuario" Content="Cadastrar Usuário" HorizontalContentAlignment="Left" Height="30" DockPanel.Dock="Top" Click="btn_CadastrarUsuario_Click"/>
-            <Button Name="btnListarUsuario" Content="Listar Usuário" HorizontalContentAlignment="Left" Height="30" DockPanel.Dock="Top" Click="btn_ListarUsuario_Click"/>
-            <Button Name="btnCadastrarMedico" Content="Cadastrar Médico" HorizontalContentAlignment="Left" Height="30" DockPanel.Dock="Top" Click="btn_CadastrarMedico_Click"/>
-            <Button Name="btnListarMedico" Content="Listar Médico" HorizontalContentAlignment="Left" Height="30" DockPanel.Dock="Top" Click="btn_ListarMedico_Click"/>
-            <Button Name="btnCadastrarPaciente" Content="Cadastrar Paciente" HorizontalContentAlignment="Left" Height="30" DockPanel.Dock="Top" Click="btn_CadastrarPaciente_Click"/>
-            <Button Name="btnListarPaciente" Content="Listar Paciente" HorizontalContentAlignment="Left" Height="30" DockPanel.Dock="Top" Click="btn_ListarPaciente_Click"/>
-            <Button Name="btnAgendarConsulta" Content="Agendar Consulta" HorizontalContentAlignment="Left" Height="30" DockPanel.Dock="Top"/>
+            <Button Name="btnCadastrarUsuario" Content="Cadastrar Usuário" HorizontalContentAlignment="Left" Height="30" DockPanel.Dock="Top" Click="btnCadastrarUsuario_Click"/>
+            <Button Name="btnListarUsuario" Content="Listar Usuário" HorizontalContentAlignment="Left" Height="30" DockPanel.Dock="Top" Click="btnListarUsuario_Click"/>
+            <Button Name="btnCadastrarMedico" Content="Cadastrar Médico" HorizontalContentAlignment="Left" Height="30" DockPanel.Dock="Top" Click="btnCadastrarMedico_Click"/>
+            <Button Name="btnListarMedico" Content="Listar Médico" HorizontalContentAlignment="Left" Height="30" DockPanel.Dock="Top" Click="btnListarMedico_Click"/>
+            <Button Name="btnCadastrarPaciente" Content="Cadastrar Paciente" HorizontalContentAlignment="Left" Height="30" DockPanel.Dock="Top" Click="btnCadastrarPaciente_Click"/>
+            <Button Name="btnListarPaciente" Content="Listar Paciente" HorizontalContentAlignment="Left" Height="30" DockPanel.Dock="Top" Click="btnListarPaciente_Click"/>
+            <Button Name="btnAgendarConsulta" Content="Agendar Consulta" HorizontalContentAlignment="Left" Height="30" DockPanel.Dock="Top" Click="btnAgendarConsulta_Click"/>
             <Button Name="btnListarConsulta" Content="Listar Consulta" HorizontalContentAlignment="Left" Height="30" DockPanel.Dock="Top"/>
             <Button Name="btnAlterarPaciente" Content="Atualizar Dados Paciente" HorizontalContentAlignment="Left" Height="30" DockPanel.Dock="Top"/>
             <Button Name="btnAlterarAgendamento" Content="Alterar Agendamento" HorizontalContentAlignment="Left" Height="30" DockPanel.Dock="Top"/>
             <Button Name="btnImpressaoDeclaracao" Content="Imprimir Declaração" HorizontalContentAlignment="Left" Height="30" DockPanel.Dock="Top"/>
-            <Button Name="btnEncerrarSistema" Content="Encerrar Sistema" Height="30" DockPanel.Dock="Top" Click="btn_EncerrarSistema_Click"/>
+            <Button Name="btnEncerrarSistema" Content="Encerrar Sistema" Height="30" DockPanel.Dock="Top" Click="btnEncerrarSistema_Click"/>
 
         </DockPanel>
         

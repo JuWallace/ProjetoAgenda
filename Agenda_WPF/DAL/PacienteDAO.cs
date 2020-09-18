@@ -19,21 +19,13 @@ namespace Agenda_WPF.DAL
             return false;
         }
 
-        public static Paciente BuscarPacientePorNome(Paciente p)
-        {
-            return ctx.Pacientes.FirstOrDefault(x => x.Nome.Equals(p.Nome));
-        }
+        public static Paciente BuscarPacientePorId(int id) => ctx.Pacientes.Find(id);
+
+        public static Paciente BuscarPacientePorCpf(Paciente p) => ctx.Pacientes.FirstOrDefault(x => x.Cpf.Equals(p.Cpf));
+        public static Paciente BuscarPacientePorNome(Paciente p) => ctx.Pacientes.FirstOrDefault(x => x.Nome.Equals(p.Nome));
 
 
-        public static Paciente BuscarPacientePorId(int id)
-        {
-            return ctx.Pacientes.Find(id);
-        }
+        public static List<Paciente> ListarPacientes() => ctx.Pacientes.ToList();
 
-        public static List<Paciente> ListarPacientes()
-        {
-            //return ctx.Produtos.FirstOrDefault( x => x.ProdutoId == id);    
-            return ctx.Pacientes.ToList();
-        }
     }
 }

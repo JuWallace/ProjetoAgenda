@@ -5,12 +5,18 @@
     <Compile Update="View\frmCadastrarUsuario.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="View\frmListarAgenda.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="View\frmListarUsuario.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="View\frmCadastrarUsuario.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\frmListarAgenda.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\frmListarUsuario.xaml">

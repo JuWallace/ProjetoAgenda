@@ -32,19 +32,19 @@ namespace Agenda_WPF.Migrations
                 {
                     IdPaciente = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
+                    NumPlano = table.Column<string>(nullable: true),
                     Nome = table.Column<string>(nullable: true),
                     Cpf = table.Column<string>(nullable: true),
                     Rg = table.Column<string>(nullable: true),
                     Nascimento = table.Column<string>(nullable: true),
                     Telefone = table.Column<string>(nullable: true),
                     Email = table.Column<string>(nullable: true),
-                    NumPlano = table.Column<string>(nullable: true),
+                    Cep = table.Column<string>(nullable: true),
                     Rua = table.Column<string>(nullable: true),
                     Numero = table.Column<string>(nullable: true),
                     Bairro = table.Column<string>(nullable: true),
                     Cidade = table.Column<string>(nullable: true),
                     Estado = table.Column<string>(nullable: true),
-                    Cep = table.Column<string>(nullable: true),
                     CriadoEm = table.Column<DateTime>(nullable: false)
                 },
                 constraints: table =>

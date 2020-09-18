@@ -42,5 +42,26 @@ namespace Agenda_WPF.View
         {
             this.Close();
         }
+
+        private void btnListarPaciente_Click(object sender, RoutedEventArgs e)
+        {
+            frmListarPaciente listarPaciente = new frmListarPaciente();
+            listarPaciente.Show();
+        }
+
+        private void txtDta_TextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
+        {
+            if (txtDta.Text != null)
+            {
+                frmListarAgenda listarAgenda = new frmListarAgenda();
+                listarAgenda.Show();
+            }
+        }
+
+        private void btnCadastrarPaciente_Click(object sender, RoutedEventArgs e)
+        {
+            frmCadastrarPaciente cadastrarPaciente = new frmCadastrarPaciente();
+            cadastrarPaciente.Show();
+        }
     }
 }
