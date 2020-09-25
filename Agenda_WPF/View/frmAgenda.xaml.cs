@@ -1,6 +1,7 @@
 ﻿using Agenda_WPF.DAL;
 using Agenda_WPF.Model;
 using System.Collections.Generic;
+using System.Linq;
 using System.Windows;
 using System.Windows.Documents;
 
@@ -13,7 +14,9 @@ namespace Agenda_WPF.View
     {
         private string operacao;
         List<Paciente> pacientes = new List<Paciente>();
-        List<Medico> medicos = new List<Medico>();
+       
+
+        Context ctx = SingletonContext.GetInstance();
        
         public frmAgenda()
         {
@@ -94,9 +97,10 @@ namespace Agenda_WPF.View
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-
+            //var consulta = ctx.Medicos;
+            //cboMedico.ItemsSource = consulta.ToList();
             cboMedico.ItemsSource = MedicoDAO.ListarMedicos();
-            cboMedico.DisplayMemberPath = "Medico";
+            cboMedico.DisplayMemberPath = "Nome";
             cboMedico.SelectedValuePath = "IdMedico";
         }
 

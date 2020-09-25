@@ -31,13 +31,13 @@ namespace Agenda_WPF
         private void btnCadastrarUsuario_Click(object sender, RoutedEventArgs e)
         {
             frmCadastrarUsuario CadUsuario = new frmCadastrarUsuario();
-            CadUsuario.Show();
+            CadUsuario.ShowDialog();
         }
 
         private void btnCadastrarMedico_Click(object sender, RoutedEventArgs e)
         {
             frmCadastrarMedico CadMedico = new frmCadastrarMedico();
-            CadMedico.Show();
+            CadMedico.ShowDialog();
         }
 
         private void btnCadastrarPaciente_Click(object sender, RoutedEventArgs e)
@@ -60,21 +60,20 @@ namespace Agenda_WPF
         private void btnListarUsuario_Click(object sender, RoutedEventArgs e)
         {
             frmListarUsuario listarUsuario = new frmListarUsuario();
-            listarUsuario.Show();
+            listarUsuario.ShowDialog();
         }
 
         private void btnListarMedico_Click(object sender, RoutedEventArgs e)
         {
-            //frmListarMedico listarMedico = new frmListarMedico();
-            //listarMedico.Show();
+            frmListarMedico listarMedico = new frmListarMedico();
+            listarMedico.Show();
         }
 
         private void btnAgendarConsulta_Click(object sender, RoutedEventArgs e)
         {
             frmAgenda agenda = new frmAgenda();
-            agenda.Show();
+            agenda.ShowDialog();
         }
-
 
     }
 }

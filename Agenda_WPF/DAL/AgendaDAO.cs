@@ -8,7 +8,7 @@ namespace Agenda_WPF.DAL
 {
     class AgendaDAO
     {
-        private static Context ctx = new Context();
+        private static Context ctx = SingletonContext.GetInstance();
 
         public static bool CadastrarAgenda(Agenda a)
         {

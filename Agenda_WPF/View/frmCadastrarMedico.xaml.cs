@@ -1,6 +1,8 @@
 ﻿using Agenda_WPF.DAL;
 using Agenda_WPF.Model;
 using Agenda_WPF.Utils;
+using RestSharp;
+using RestSharp.Serialization.Json;
 using System;
 using System.Windows;
 
@@ -16,76 +18,97 @@ namespace Agenda_WPF.View
         {
             InitializeComponent();
             LimpaCampos();
-            txtNome.Focus();
+            mskCpf.Focus();
         }
 
-        
         private void LimpaCampos()
         {
             btnCadastrar.IsEnabled = true;
             btnAlterar.IsEnabled = false;
             btnLocalizar.IsEnabled = true;
             btnExcluir.IsEnabled = false;
-            btnFechar.IsEnabled = true;
+            btnCancelar.IsEnabled = false;
 
             txtNome.Clear();
-            txtCpf.Clear();
-            txtCrm.Clear();
-            txtTelefone.Clear();
+            mskCpf.Clear();
+            txtRg.Clear();
+            mskdtaNascimento.Clear();
+            mskTelefone.Clear();
             txtEmail.Clear();
+            txtCrm.Clear();
             txtEspecialidade.Clear();
+            txtRua.Clear();
+            txtNumero.Clear();
+            txtBairro.Clear();
+            txtCidade.Clear();
+            txtEstado.Clear();
+            mskCep_Leave.Clear();
 
         }
-        private void btnSalvar_Click(object sender, RoutedEventArgs e)
+
+        private void btnBuscarCpf_Click(object sender, RoutedEventArgs e)
         {
-            using (Context ctx = new Context())
+            Medico med = new Medico();
+            med.Cpf = mskCpf.Text;
+
+            if (mskCpf.Text.Length == 11 || mskCpf.Text.Length == 14)
             {
-                Medico m = new Medico();
-                m.Nome = txtNome.Text;
-                m.Cpf = txtCpf.Text;
-                m.Crm = txtCrm.Text;
-                m.Telefone = txtTelefone.Text;
-                m.Email = txtEmail.Text;
-                m.Especialidade = txtEspecialidade.Text;
-
-                if (operacao == "inserir")
+                if (Valida.ValidarCPF(med.Cpf))
                 {
-                    Context context = new Context();
+                    var m = MedicoDAO.BuscarMedicoPorCpf(med);
+                    if (m == null)
                     {
-                        context.Medicos.Add(m);
-                        context.SaveChanges();
+                        MessageBox.Show($"Informe um CPF Válido!");
                     }
+                    else
+                    {
+                        txtCrm.Text = m.Crm;
+                        txtEspecialidade.Text = m.Especialidade;
+                        txtNome.Text = m.Nome;
+                        txtRg.Text = m.Rg;
+                        mskdtaNascimento.Text = m.Nascimento;
+                        mskTelefone.Text = m.Telefone;
+                        txtEmail.Text = m.Email;
+                        mskCep_Leave.Text = m.Cep;
+                        txtRua.Text = m.Rua;
+                        txtNumero.Text = m.Numero;
+                        txtBairro.Text = m.Bairro;
+                        txtCidade.Text = m.Cidade;
+                        txtEstado.Text = m.Estado;
 
+                        btnCadastrar.IsEnabled = false;
+                        btnAlterar.IsEnabled = true;
+                        btnExcluir.IsEnabled = true;
+                        btnLocalizar.IsEnabled = true;
+                        btnCancelar.IsEnabled = true;
+                    }
                 }
-                if (operacao == "alterar")
+                else
                 {
-                    {
-                        ctx.Medicos.Add(m);
-                        ctx.SaveChanges();
-                    }
+                    MessageBox.Show("CPF inválido.");
                 }
-
-                //this.ListarDados();
-                this.AlteraBotoes(1);
-                this.LimpaCampos();
             }
-
-
         }
+
         private void btnCadastrar_Click(object sender, RoutedEventArgs e)
         {
-            //this.operacao = "inserir";
-            //this.AlteraBotoes(2);
-            //Context ctx = new Context();
+            Context ctx = SingletonContext.GetInstance();
             Medico med = new Medico();
-            //Pessoa med = new Pessoa();
 
             med.Nome = txtNome.Text;
-            med.Cpf = txtCpf.Text;
+            med.Cpf = mskCpf.Text;
+            med.Rg = txtRg.Text;
+            med.Nascimento = mskdtaNascimento.Text;
+            med.Telefone = mskTelefone.Text;
+            med.Email = txtEmail.Text;
             med.Crm = txtCrm.Text;
             med.Especialidade = txtEspecialidade.Text;
-            med.Telefone = txtTelefone.Text;
-            med.Email = txtEmail.Text;
+            med.Rua = txtRua.Text;
+            med.Numero = txtNumero.Text;
+            med.Bairro = txtBairro.Text;
+            med.Cidade = txtCidade.Text;
+            med.Estado = txtEstado.Text;
+            med.Cep = mskCep_Leave.Text;
 
             if (Valida.ValidarCPF(med.Cpf))
             {
@@ -107,19 +130,6 @@ namespace Agenda_WPF.View
             }
 
         }
-
-        //private void ListarDados(int op)
-        //{
-        //    this.ListarDados();
-        //}
-        //private void ListarDados()
-        //{
-        //    Context ctx = new Context();
-        //    {
-        //        var consulta = ctx.Pacientes;
-        //        dgDados.ItemsSource = consulta.ToList();
-        //    }
-        //}
 
         private void AlteraBotoes(int op)
         {
@@ -147,7 +157,31 @@ namespace Agenda_WPF.View
             }
         }
 
-           
+        private void btnBuscarCep_Click(object sender, RoutedEventArgs e)
+        {
+            LocalizarCEP();
+        }
+
+        private void LocalizarCEP()
+        {
+            RestClient restClient = new RestClient(string.Format("https://viacep.com.br/ws/{0}/json/", mskCep_Leave.Text));
+            RestRequest restRequest = new RestRequest(Method.GET);
+            IRestResponse restResponse = restClient.Execute(restRequest);
+
+            BuscaCep cepRetorno = new JsonDeserializer().Deserialize<BuscaCep>(restResponse);
+
+            if (cepRetorno.cep is null)
+            {
+                MessageBox.Show("CEP não encontrado! ", "Atenção!", MessageBoxButton.OK, MessageBoxImage.Exclamation);
+                mskCep_Leave.Clear();
+                mskCep_Leave.Focus();
+                return;
+            }
+            txtRua.Text = cepRetorno.logradouro;
+            txtBairro.Text = cepRetorno.bairro;
+            txtCidade.Text = cepRetorno.localidade;
+            txtEstado.Text = cepRetorno.uf;
+        }
 
         private void btnCancelar_Click(object sender, RoutedEventArgs e)
         {
@@ -172,6 +206,14 @@ namespace Agenda_WPF.View
             listarPaciente.Show();
         }
 
+        
+
+        
+
+        private void btnAlterar_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 
 }

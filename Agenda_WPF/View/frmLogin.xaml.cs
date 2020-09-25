@@ -15,9 +15,11 @@ namespace Agenda_WPF.View
             InitializeComponent();
             txtEmailLogin.Focus();
         }
+
+        //Context ctx = SingletonContext.GetInstance();
+        Usuario u = new Usuario();
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
-            Usuario u = new Usuario();
             u.Email = txtEmailLogin.Text;
 
             var usr = UsuarioDAO.ValidaLogin(u.Email);

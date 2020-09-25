@@ -8,6 +8,9 @@
     <Compile Update="View\frmListarAgenda.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="View\frmListarMedico.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="View\frmListarUsuario.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -17,6 +20,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\frmListarAgenda.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\frmListarMedico.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\frmListarUsuario.xaml">

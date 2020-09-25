@@ -3,8 +3,6 @@ using Agenda_WPF.Model;
 using Agenda_WPF.Utils;
 using RestSharp;
 using RestSharp.Serialization.Json;
-using System;
-using System.Linq;
 using System.Windows;
 
 namespace Agenda_WPF.View
@@ -37,7 +35,7 @@ namespace Agenda_WPF.View
             btnAlterar.IsEnabled = false;
             btnLocalizar.IsEnabled = true;
             btnExcluir.IsEnabled = false;
-            btnFechar.IsEnabled = true;
+            btnCancelar.IsEnabled = true;
 
             txtNome.Clear();
             mskCpf.Clear();
@@ -55,11 +53,56 @@ namespace Agenda_WPF.View
             mskCep_Leave.Clear();
         }
 
+        private void btnBuscarCpf_Click(object sender, RoutedEventArgs e)
+        {
+            Paciente pac = new Paciente();
+            pac.Cpf = mskCpf.Text;
+
+            if (mskCpf.Text.Length == 11 || mskCpf.Text.Length == 14)
+            {
+                if (Valida.ValidarCPF(pac.Cpf))
+                {
+                    var p = PacienteDAO.BuscarPacientePorCpf(pac);
+                    if (p == null)
+                    {
+                        MessageBox.Show($"Informe um CPF Válido!");
+                    }
+                    else
+                    {
+                        cboPlano.Text = p.NomePlano;
+                        txtNPlano.Text = p.NumPlano;
+                        txtNome.Text = p.Nome;
+                        txtRg.Text = p.Rg;
+                        mskdtaNascimento.Text = p.Nascimento;
+                        mskTelefone.Text = p.Telefone;
+                        txtEmail.Text = p.Email;
+                        mskCep_Leave.Text = p.Cep;
+                        txtRua.Text = p.Rua;
+                        txtNumero.Text = p.Numero;
+                        txtBairro.Text = p.Bairro;
+                        txtCidade.Text = p.Cidade;
+                        txtEstado.Text = p.Estado;
+
+                        btnCadastrar.IsEnabled = false;
+                        btnAlterar.IsEnabled = true;
+                        btnExcluir.IsEnabled = true;
+                        btnLocalizar.IsEnabled = true;
+                        btnCancelar.IsEnabled = true;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("CPF inválido.");
+                }
+            }
+
+        }
+
         private void btnCadastrar_Click(object sender, RoutedEventArgs e)
         {
             //this.operacao = "inserir";
             //this.AlteraBotoes(2);
-            Context ctx = new Context();
+            Context ctx = SingletonContext.GetInstance();
             Paciente pac = new Paciente();
             pac.Nome = txtNome.Text;
             pac.Cpf = mskCpf.Text;
@@ -76,27 +119,6 @@ namespace Agenda_WPF.View
             pac.Estado = txtEstado.Text;
             pac.Cep = mskCep_Leave.Text;
 
-            //if (operacao == "inserir")
-            //{
-            //    Context context = new Context();
-            //    {
-            //        context.Pacientes.Add(p);
-            //        context.SaveChanges();
-            //    }
-
-            //}
-            //if (operacao == "alterar")
-            //{
-            //    {
-            //        ctx.Pacientes.Add(p);
-            //        ctx.SaveChanges();
-            //    }
-            //}
-
-            ////this.ListarDados();
-            //this.AlteraBotoes(1);
-            //this.LimpaCampos();
-
             if (Valida.ValidarCPF(pac.Cpf))
             {
                 if (PacienteDAO.CadastrarPaciente(pac))
@@ -108,64 +130,46 @@ namespace Agenda_WPF.View
                 else
                 {
                     MessageBox.Show("Paciente já existe.");
+                    LimpaCampos();
                     mskCpf.Focus();
                 }
             }
             else
             {
                 MessageBox.Show("CPF inválido.");
+                LimpaCampos();
+                mskCpf.Focus();
             }
 
         }
+ 
+        private void AlteraBotoes(int op)
+        {
+            btnCadastrar.IsEnabled = false;
+            btnAlterar.IsEnabled = false;
+            btnLocalizar.IsEnabled = false;
+            btnExcluir.IsEnabled = false;
+            btnCancelar.IsEnabled = false;
 
+            if (op == 1)
+            {
+                //ativar as opções iniciais
+                btnCadastrar.IsEnabled = true;
+                btnLocalizar.IsEnabled = true;
+            }
+            if (op == 2)
+            {
+                //inserir um valor
+                btnCancelar.IsEnabled = true;
+            }
+            if (op == 3)
+            {
+                btnAlterar.IsEnabled = true;
+                btnExcluir.IsEnabled = true;
+            }
+        }
 
-
-        //private void ListarDados(int op)
-        //{
-        //    this.ListarDados();
-        //}
-        //private void ListarDados()
-        //{
-        //    Context ctx = new Context();
-        //    {
-        //        var consulta = ctx.Pacientes;
-        //        dgDados.ItemsSource = consulta.ToList();
-        //    }
-        //}
-
-        //private void AlteraBotoes(int op)
-        //{
-        //    btnAlterar.IsEnabled = false;
-        //    btnCadastrar.IsEnabled = false;
-        //    btnExcluir.IsEnabled = false;
-        //    btnCancelar.IsEnabled = false;
-        //    btnLocalizar.IsEnabled = false;
-        //    btnSalvar.IsEnabled = false;
-
-        //    if (op == 1)
-        //    {
-        //        //ativar as opções iniciais
-        //        btnCadastrar.IsEnabled = true;
-        //        btnLocalizar.IsEnabled = true;
-        //    }
-        //    if (op == 2)
-        //    {
-        //        //inserir um valor
-        //        btnCancelar.IsEnabled = true;
-        //        btnSalvar.IsEnabled = true;
-        //    }
-        //    if (op == 3)
-        //    {
-        //        btnAlterar.IsEnabled = true;
-        //        btnExcluir.IsEnabled = true;
-        //    }
-        //}
-
-        //private void textCep_Leave(object sender, EventArgs e)
-        //{
-        //    LocalizarCEP();
-        //}
-        private void btnBuscaCep_Click(object sender, RoutedEventArgs e)
+         private void btnBuscaCep_Click(object sender, RoutedEventArgs e)
         {
             LocalizarCEP();
         }
@@ -207,55 +211,21 @@ namespace Agenda_WPF.View
         private void btnCadastrarPaciente_Click(object sender, RoutedEventArgs e)
         {
             frmCadastrarPaciente cadastrarPaciente = new frmCadastrarPaciente();
-            cadastrarPaciente.Show();
+            cadastrarPaciente.ShowDialog();
         }
 
         private void btnListarPaciente_Click(object sender, RoutedEventArgs e)
         {
             frmListarPaciente listarPaciente = new frmListarPaciente();
-            listarPaciente.Show();
+            listarPaciente.ShowDialog();
         }
 
 
+        
 
-        private void btnBuscaCpf_Click(object sender, RoutedEventArgs e)
+        private void btnAlterar_Click(object sender, RoutedEventArgs e)
         {
-            Paciente pac = new Paciente();
-            pac.Cpf = mskCpf.Text;
 
-            if (mskCpf.Text.Length == 11 || mskCpf.Text.Length == 14)
-            {
-                if (Valida.ValidarCPF(pac.Cpf))
-                {
-                    var p = PacienteDAO.BuscarPacientePorCpf(pac);
-                    if (p == null)
-                    {
-                        MessageBox.Show($"Informe um CPF Válido!");
-                    }
-                    else
-                    {
-                        cboPlano.Text = p.NomePlano;
-                        txtNPlano.Text = p.NumPlano;
-                        txtNome.Text = p.Nome;
-                        txtRg.Text = p.Rg;
-                        mskdtaNascimento.Text = p.Nascimento;
-                        mskTelefone.Text = p.Telefone;
-                        txtEmail.Text = p.Email;
-                        mskCep_Leave.Text = p.Cep;
-                        txtRua.Text = p.Rua;
-                        txtNumero.Text = p.Numero;
-                        txtBairro.Text = p.Bairro;
-                        txtCidade.Text = p.Cidade;
-                        txtEstado.Text = p.Estado;
-
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("CPF inválido.");
-                }
-                
-            }
         }
     }
 }

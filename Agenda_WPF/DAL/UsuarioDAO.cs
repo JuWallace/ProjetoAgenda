@@ -7,19 +7,10 @@ namespace Agenda_WPF.DAL
 {
     class UsuarioDAO
     {
-        //private static Context ctx = SingletonContext.GetInstance();
-        //private static List<Usuario> usuarios = new List<Usuario>();
-        private static Context ctx = new Context();
-
-        public static List<Usuario> ListarUsuarios()
-        {
-            return ctx.Usuarios.ToList();
-        }
-
-        public static Usuario BuscarUsuarioPorCpf(string cpf)
-        {
-            return ctx.Usuarios.FirstOrDefault(x => x.Cpf.Equals(cpf));
-        }
+        private static Context ctx = SingletonContext.GetInstance();
+        public static List<Usuario> ListarUsuarios() => ctx.Usuarios.ToList();
+        public static Usuario BuscarUsuarioPorCpf(string cpf) => ctx.Usuarios.FirstOrDefault(x => x.Cpf.Equals(cpf));
+        public static Usuario BuscarUsuarioPorNome(string nome) => ctx.Usuarios.FirstOrDefault(x => x.Nome.Equals(nome));
 
         public static bool CadastrarUsuario(Usuario usr)
         {
@@ -44,10 +35,8 @@ namespace Agenda_WPF.DAL
             ctx.SaveChanges();
         }
 
-        public static Usuario ValidaLogin(string login)
-        {
-            return ctx.Usuarios.FirstOrDefault(x => x.Email.Equals(login));
-        }
+        public static Usuario ValidaLogin(string login) => ctx.Usuarios.FirstOrDefault
+                                                            (x => x.Email.Equals(login));
 
     }
 }

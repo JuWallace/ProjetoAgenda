@@ -179,3 +179,5 @@ D:\Repos_GitHub\ProjetoAgenda\Agenda_WPF\bin\Debug\netcoreapp3.1\ru\Xceed.Wpf.Av
 D:\Repos_GitHub\ProjetoAgenda\Agenda_WPF\bin\Debug\netcoreapp3.1\sv\Xceed.Wpf.AvalonDock.resources.dll
 D:\Repos_GitHub\ProjetoAgenda\Agenda_WPF\bin\Debug\netcoreapp3.1\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
 D:\Repos_GitHub\ProjetoAgenda\Agenda_WPF\obj\Debug\netcoreapp3.1\Agenda_WPF.csproj.CoreCompileInputs.cache
+D:\Repos_GitHub\ProjetoAgenda\Agenda_WPF\obj\Debug\netcoreapp3.1\View\frmListarMedico.g.cs
+D:\Repos_GitHub\ProjetoAgenda\Agenda_WPF\obj\Debug\netcoreapp3.1\View\frmListarMedico.baml
