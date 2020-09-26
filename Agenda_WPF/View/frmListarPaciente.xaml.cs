@@ -25,10 +25,8 @@ namespace Agenda_WPF.View
             p.Email = txtEmail.Text;
             using (Context ctx = new Context())
             {
-
                 if (operacao == "inserir")
                 {
-
                     {
                         ctx.Pacientes.Add(p);
                         ctx.SaveChanges();
@@ -36,7 +34,6 @@ namespace Agenda_WPF.View
                 }
                 if (operacao == "alterar")
                 {
-
                     {
                         ctx.Pacientes.Add(p);
                         ctx.SaveChanges();

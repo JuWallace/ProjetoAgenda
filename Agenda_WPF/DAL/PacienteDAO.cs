@@ -22,9 +22,13 @@ namespace Agenda_WPF.DAL
         public static Paciente BuscarPacientePorId(int id) => ctx.Pacientes.Find(id);
         public static Paciente BuscarPacientePorCpf(Paciente p) => ctx.Pacientes.FirstOrDefault(x => x.Cpf.Equals(p.Cpf));
         public static Paciente BuscarPacientePorNome(Paciente p) => ctx.Pacientes.FirstOrDefault(x => x.Nome.Equals(p.Nome));
-
-
         public static List<Paciente> ListarPacientes() => ctx.Pacientes.ToList();
+
+        public static void AlterarPaciente(Paciente p)
+        {
+            ctx.Pacientes.Update(p);
+            ctx.SaveChanges();
+        }
 
     }
 }

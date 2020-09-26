@@ -20,24 +20,4 @@ namespace Agenda_WPF.Utils
         public string gia { get; set; }
     }
 
-    //public void LocalizarCEP()
-    //{
-    //    RestClient restClient = new RestClient(string.Format("https://viacep.com.br/ws/{0}/json/", txtCep_Leave.Text));
-    //    RestRequest restRequest = new RestRequest(Method.GET);
-    //    IRestResponse restResponse = restClient.Execute(restRequest);
-
-    //    BuscaCep cepRetorno = new JsonDeserializer().Deserialize<BuscaCep>(restResponse);
-
-    //    if (cepRetorno.cep is null)
-    //    {
-    //        MessageBox.Show("CEP não encontrado! ", "Atenção!", MessageBoxButton.OK, MessageBoxImage.Exclamation);
-    //        frmtxtCep_Leave.Clear();
-    //        txtCep_Leave.Focus();
-    //        return;
-    //    }
-    //    txtRua.Text = cepRetorno.logradouro;
-    //    txtBairro.Text = cepRetorno.bairro;
-    //    txtCidade.Text = cepRetorno.localidade;
-    //    txtEstado.Text = cepRetorno.uf;
-    //}
 }
