@@ -4,14 +4,16 @@ using Agenda_WPF.Model;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Agenda_WPF.Migrations
 {
     [DbContext(typeof(Context))]
-    partial class ContextModelSnapshot : ModelSnapshot
+    [Migration("20200927131207_CriatbAgendaeAtualizatbProntuario")]
+    partial class CriatbAgendaeAtualizatbProntuario
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -179,43 +181,6 @@ namespace Agenda_WPF.Migrations
                     b.ToTable("Pacientes");
                 });
 
-            modelBuilder.Entity("Agenda_WPF.Model.Prontuario", b =>
-                {
-                    b.Property<int>("IdProntuario")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Avaliacao")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("DataConsulta")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Medicamento")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int?>("NomeMedicoIdMedico")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("NomePacienteIdPaciente")
-                        .HasColumnType("int");
-
-                    b.Property<string>("PlanoSaude")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Sintomas")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("IdProntuario");
-
-                    b.HasIndex("NomeMedicoIdMedico");
-
-                    b.HasIndex("NomePacienteIdPaciente");
-
-                    b.ToTable("Prontuarios");
-                });
-
             modelBuilder.Entity("Agenda_WPF.Model.Usuario", b =>
                 {
                     b.Property<int>("UsuarioID")
@@ -300,17 +265,6 @@ namespace Agenda_WPF.Migrations
                     b.HasOne("Agenda_WPF.Model.Paciente", "Plano")
                         .WithMany()
                         .HasForeignKey("PlanoIdPaciente");
-                });
-
-            modelBuilder.Entity("Agenda_WPF.Model.Prontuario", b =>
-                {
-                    b.HasOne("Agenda_WPF.Model.Medico", "NomeMedico")
-                        .WithMany()
-                        .HasForeignKey("NomeMedicoIdMedico");
-
-                    b.HasOne("Agenda_WPF.Model.Paciente", "NomePaciente")
-                        .WithMany()
-                        .HasForeignKey("NomePacienteIdPaciente");
                 });
 #pragma warning restore 612, 618
         }

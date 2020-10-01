@@ -1,4 +1,3 @@
-D:\Repos_GitHub\ProjetoAgenda\Agenda_WPF\obj\Debug\netcoreapp3.1\Agenda_WPF.csprojAssemblyReference.cache
 D:\Repos_GitHub\ProjetoAgenda\Agenda_WPF\obj\Debug\netcoreapp3.1\View\frmAgenda.g.cs
 D:\Repos_GitHub\ProjetoAgenda\Agenda_WPF\obj\Debug\netcoreapp3.1\View\frmCadastrarMedico.g.cs
 D:\Repos_GitHub\ProjetoAgenda\Agenda_WPF\obj\Debug\netcoreapp3.1\View\frmCadastrarPaciente.g.cs
@@ -181,3 +180,4 @@ D:\Repos_GitHub\ProjetoAgenda\Agenda_WPF\bin\Debug\netcoreapp3.1\zh-Hans\Xceed.W
 D:\Repos_GitHub\ProjetoAgenda\Agenda_WPF\obj\Debug\netcoreapp3.1\Agenda_WPF.csproj.CoreCompileInputs.cache
 D:\Repos_GitHub\ProjetoAgenda\Agenda_WPF\obj\Debug\netcoreapp3.1\View\frmListarMedico.g.cs
 D:\Repos_GitHub\ProjetoAgenda\Agenda_WPF\obj\Debug\netcoreapp3.1\View\frmListarMedico.baml
+D:\Repos_GitHub\ProjetoAgenda\Agenda_WPF\obj\Debug\netcoreapp3.1\Agenda_WPF.csprojAssemblyReference.cache
