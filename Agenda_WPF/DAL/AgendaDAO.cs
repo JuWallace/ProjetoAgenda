@@ -10,16 +10,15 @@ namespace Agenda_WPF.DAL
     {
         private static Context ctx = SingletonContext.GetInstance();
 
-        public static bool CadastrarAgenda(Agenda a)
+        public static string CadastrarAgenda(Agenda a)
         {
-            if (BuscarAgendaPorNome(a) == null)
+             if(BuscarAgendaPorData(a) == null)
             {
                 ctx.Agendas.Add(a);
                 ctx.SaveChanges();
-                return true;
+                return null;
             }
-            return false;
-
+            return "Horário já agendado";
 
         }
 
@@ -28,6 +27,12 @@ namespace Agenda_WPF.DAL
             return ctx.Agendas.FirstOrDefault(x => x.Paciente.Equals(a.Paciente));
         }
 
+        public static Agenda BuscarAgendaPorData(Agenda a)
+        {
+            return ctx.Agendas.FirstOrDefault(x => x.DataAgendada.Equals(a.DataAgendada) &&
+                                              x.HoraAgendada.Equals(a.HoraAgendada) && 
+                                              x.Paciente.Equals(a.Paciente));
+        }
 
         public static Agenda BuscarPacientePorId(int id)
         {

@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1
 D:\Repos_GitHub\ProjetoAgenda\Agenda_WPF\App.xaml
-13-1034210832
+18374879533
 
-53606845318
+63-1720413892
 225-1319253441
-View\frmAgenda.xaml;View\frmCadastrarMedico.xaml;View\frmCadastrarPaciente.xaml;View\frmCadastrarUsuario.xaml;View\frmListarAgenda.xaml;View\frmListarMedico.xaml;View\frmListarPaciente.xaml;View\frmListarUsuario.xaml;View\frmLogin.xaml;View\frmTelaPrincipalAdm.xaml;View\frmTelaPrincipalMedico.xaml;View\frmTelaPrincipalRecepcionista.xaml;View\MainWindow.xaml;
+Views\frmAgenda.xaml;Views\frmCadastrarMedico.xaml;Views\frmCadastrarPaciente.xaml;Views\frmCadastrarPlanoSaude.xaml;Views\frmCadastrarProcedimento.xaml;Views\frmCadastrarProntuario.xaml;Views\frmCadastrarUsuario.xaml;Views\frmListarAgenda.xaml;Views\frmListarMedico.xaml;Views\frmListarPaciente.xaml;Views\frmListarProntuario.xaml;Views\frmListarUsuario.xaml;Views\frmLogin.xaml;Views\frmProntuario.xaml;Views\frmTelaPrincipalAdm.xaml;Views\frmTelaPrincipalMedico.xaml;Views\frmTelaPrincipalRecepcionista.xaml;Views\MainWindow.xaml;
 
-True
+False
 

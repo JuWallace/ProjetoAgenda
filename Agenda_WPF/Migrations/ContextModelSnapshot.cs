@@ -41,14 +41,14 @@ namespace Agenda_WPF.Migrations
                     b.Property<string>("HoraAgendada")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("NomeIdPaciente")
+                    b.Property<int?>("MedicoIdMedico")
                         .HasColumnType("int");
 
-                    b.Property<int?>("NomeMedicoIdMedico")
+                    b.Property<int?>("PacienteIdPaciente")
                         .HasColumnType("int");
 
-                    b.Property<int?>("PlanoIdPaciente")
-                        .HasColumnType("int");
+                    b.Property<string>("Plano")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("IdAgenda");
 
@@ -56,11 +56,9 @@ namespace Agenda_WPF.Migrations
 
                     b.HasIndex("EspecialidadeIdMedico");
 
-                    b.HasIndex("NomeIdPaciente");
+                    b.HasIndex("MedicoIdMedico");
 
-                    b.HasIndex("NomeMedicoIdMedico");
-
-                    b.HasIndex("PlanoIdPaciente");
+                    b.HasIndex("PacienteIdPaciente");
 
                     b.ToTable("Agenda");
                 });
@@ -179,6 +177,39 @@ namespace Agenda_WPF.Migrations
                     b.ToTable("Pacientes");
                 });
 
+            modelBuilder.Entity("Agenda_WPF.Model.PlanoSaude", b =>
+                {
+                    b.Property<int>("PlanoSaudeId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Plano")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("PlanoSaudeId");
+
+                    b.ToTable("tbPlanoSaude");
+                });
+
+            modelBuilder.Entity("Agenda_WPF.Model.Procedimento", b =>
+                {
+                    b.Property<int>("ProcedimentoId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("NomeProcedimento")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<double>("Valor")
+                        .HasColumnType("float");
+
+                    b.HasKey("ProcedimentoId");
+
+                    b.ToTable("tbProcedimentos");
+                });
+
             modelBuilder.Entity("Agenda_WPF.Model.Prontuario", b =>
                 {
                     b.Property<int>("IdProntuario")
@@ -289,17 +320,13 @@ namespace Agenda_WPF.Migrations
                         .WithMany()
                         .HasForeignKey("EspecialidadeIdMedico");
 
-                    b.HasOne("Agenda_WPF.Model.Paciente", "Nome")
+                    b.HasOne("Agenda_WPF.Model.Medico", "Medico")
                         .WithMany()
-                        .HasForeignKey("NomeIdPaciente");
+                        .HasForeignKey("MedicoIdMedico");
 
-                    b.HasOne("Agenda_WPF.Model.Medico", "NomeMedico")
+                    b.HasOne("Agenda_WPF.Model.Paciente", "Paciente")
                         .WithMany()
-                        .HasForeignKey("NomeMedicoIdMedico");
-
-                    b.HasOne("Agenda_WPF.Model.Paciente", "Plano")
-                        .WithMany()
-                        .HasForeignKey("PlanoIdPaciente");
+                        .HasForeignKey("PacienteIdPaciente");
                 });
 
             modelBuilder.Entity("Agenda_WPF.Model.Prontuario", b =>

@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="View\frmCadastrarPaciente1.xaml.cs" />
+    <Compile Remove="Views\frmCadastrarPaciente1.xaml.cs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -15,7 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Page Remove="View\frmCadastrarPaciente1.xaml" />
+    <Page Remove="Views\frmCadastrarPaciente1.xaml" />
   </ItemGroup>
 
   <ItemGroup>
@@ -43,25 +43,25 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="View\frmCadastrarMedico.xaml.cs">
+    <Compile Update="Views\frmCadastrarMedico.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="View\frmTelaPrincipalAdm.xaml.cs">
+    <Compile Update="Views\frmTelaPrincipalAdm.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="View\frmTelaPrincipalMedico.xaml.cs">
+    <Compile Update="Views\frmTelaPrincipalMedico.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
 
   <ItemGroup>
-    <Page Update="View\frmCadastrarMedico.xaml">
+    <Page Update="Views\frmCadastrarMedico.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="View\frmTelaPrincipalAdm.xaml">
+    <Page Update="Views\frmTelaPrincipalAdm.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="View\frmTelaPrincipalMedico.xaml">
+    <Page Update="Views\frmTelaPrincipalMedico.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

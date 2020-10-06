@@ -2,30 +2,36 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup />
   <ItemGroup>
-    <Compile Update="View\frmCadastrarUsuario.xaml.cs">
+    <Compile Update="Views\frmCadastrarProntuario.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="View\frmListarAgenda.xaml.cs">
+    <Compile Update="Views\frmCadastrarUsuario.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="View\frmListarMedico.xaml.cs">
+    <Compile Update="Views\frmListarAgenda.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="View\frmListarUsuario.xaml.cs">
+    <Compile Update="Views\frmListarMedico.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\frmListarUsuario.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="View\frmCadastrarUsuario.xaml">
+    <Page Update="Views\frmCadastrarProntuario.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="View\frmListarAgenda.xaml">
+    <Page Update="Views\frmCadastrarUsuario.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="View\frmListarMedico.xaml">
+    <Page Update="Views\frmListarAgenda.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="View\frmListarUsuario.xaml">
+    <Page Update="Views\frmListarMedico.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\frmListarUsuario.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

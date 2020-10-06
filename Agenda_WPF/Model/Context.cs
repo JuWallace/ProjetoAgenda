@@ -8,7 +8,11 @@ namespace Agenda_WPF.Model
         public DbSet<Agenda> Agendas { get; set; }
         public DbSet<Medico> Medicos { get; set; }
         public DbSet<Usuario> Usuarios { get; set; }
+        public DbSet<PlanoSaude> PlanosSaude { get; set; }
+        public DbSet<Procedimento> Procedimentos { get; set; }
         public DbSet<Prontuario> Prontuarios { get; set; }
+        
+
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
