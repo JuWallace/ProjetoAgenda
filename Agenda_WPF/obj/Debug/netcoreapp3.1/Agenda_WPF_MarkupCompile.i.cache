@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\Repos_GitHub\ProjetoAgenda\Agenda_WPF\obj\Debug\netcoreapp3.1\
+D:\Repos_GitHub\ProjetoAgenda_Dario\Agenda_WPF\obj\Debug\netcoreapp3.1\
 Agenda_WPF
 none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1
-D:\Repos_GitHub\ProjetoAgenda\Agenda_WPF\App.xaml
+D:\Repos_GitHub\ProjetoAgenda_Dario\Agenda_WPF\App.xaml
 18374879533
 
 63-1720413892
 225-1319253441
 Views\frmAgenda.xaml;Views\frmCadastrarMedico.xaml;Views\frmCadastrarPaciente.xaml;Views\frmCadastrarPlanoSaude.xaml;Views\frmCadastrarProcedimento.xaml;Views\frmCadastrarProntuario.xaml;Views\frmCadastrarUsuario.xaml;Views\frmListarAgenda.xaml;Views\frmListarMedico.xaml;Views\frmListarPaciente.xaml;Views\frmListarProntuario.xaml;Views\frmListarUsuario.xaml;Views\frmLogin.xaml;Views\frmProntuario.xaml;Views\frmTelaPrincipalAdm.xaml;Views\frmTelaPrincipalMedico.xaml;Views\frmTelaPrincipalRecepcionista.xaml;Views\MainWindow.xaml;
 
-True
+False
 
