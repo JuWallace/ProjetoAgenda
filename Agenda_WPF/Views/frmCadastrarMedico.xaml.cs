@@ -15,15 +15,12 @@ namespace Agenda_WPF.Views
     {
         Context ctx = SingletonContext.GetInstance();
 
-        private string operacao;
-
         public frmCadastrarMedico()
         {
             InitializeComponent();
             LimpaCampos();
             mskCpf.Focus();
         }
-
         private void LimpaCampos()
         {
             btnCadastrar.IsEnabled = true;
@@ -49,7 +46,6 @@ namespace Agenda_WPF.Views
             mskCep_Leave.Clear();
 
         }
-
         private void btnBuscarCpf_Click(object sender, RoutedEventArgs e)
         {
             Medico med = new Medico();
@@ -95,7 +91,6 @@ namespace Agenda_WPF.Views
                 }
             }
         }
-
         private void btnCadastrar_Click(object sender, RoutedEventArgs e)
         {
             Medico med = new Medico();
@@ -159,12 +154,10 @@ namespace Agenda_WPF.Views
                 btnExcluir.IsEnabled = true;
             }
         }
-
         private void btnBuscarCep_Click(object sender, RoutedEventArgs e)
         {
             LocalizarCEP();
         }
-
         private void LocalizarCEP()
         {
             RestClient restClient = new RestClient(string.Format("https://viacep.com.br/ws/{0}/json/", mskCep_Leave.Text));
@@ -185,30 +178,25 @@ namespace Agenda_WPF.Views
             txtCidade.Text = cepRetorno.localidade;
             txtEstado.Text = cepRetorno.uf;
         }
-
         private void btnCancelar_Click(object sender, RoutedEventArgs e)
         {
             this.AlteraBotoes(1);
             this.LimpaCampos();
         }
-
         private void btnFechar_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
         }
-
         private void btnCadastrarPaciente_Click(object sender, RoutedEventArgs e)
         {
             frmCadastrarPaciente cadastrarPaciente = new frmCadastrarPaciente();
             cadastrarPaciente.Show();
         }
-
         private void btnListarPaciente_Click(object sender, RoutedEventArgs e)
         {
             frmListarPaciente listarPaciente = new frmListarPaciente();
             listarPaciente.Show();
         }
-
         private void btnAlterar_Click(object sender, RoutedEventArgs e)
         {
             Medico m = new Medico();
@@ -241,7 +229,6 @@ namespace Agenda_WPF.Views
 
             
         }
-
         private void btnExcluir_Click(object sender, RoutedEventArgs e)
         {
             Medico med = new Medico();

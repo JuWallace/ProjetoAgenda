@@ -13,13 +13,13 @@ namespace Agenda_WPF.Model
 
         [Key]
         public int IdAgenda{ get; set; }
+        public DateTime DataAgendada { get; set; }
+        public string HoraAgendada { get; set; }
         public Paciente Paciente { get; set; }
         public Paciente Cpf { get; set; }
         public String Plano { get; set; }
         public Medico Medico { get; set; }
         public Medico Especialidade { get; set; }
-        public DateTime DataAgendada { get; set; }
-        public string HoraAgendada { get; set; }
         public DateTime CriadoEm { get; set; }
 
 

@@ -11,9 +11,7 @@ namespace Agenda_WPF.Views
     /// </summary>
     public partial class frmAgenda : Window
     {
-        private string operacao;
         Agenda ag = new Agenda();
-
         public string dtaAgendamento
         {
             set { dtpDtaAgendamento.Text = value; }
@@ -41,7 +39,6 @@ namespace Agenda_WPF.Views
         {
             set { txtPlanoPaciente.Text = value; }
         }
-
         public frmAgenda()
         {
             InitializeComponent();
@@ -73,28 +70,16 @@ namespace Agenda_WPF.Views
                 btnExcluir.IsEnabled = true;
             }
         }
-
-        private void listaMedico()
+        private void ListaMedico()
         {
             //Carregar os dados dos Médicos
             cboMedico.ItemsSource = MedicoDAO.ListarMedicos();
             cboMedico.SelectedValuePath = "IdMedico";
             cboMedico.DisplayMemberPath = "Nome";
         }
-
-        private void cboMedico_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
-        {
-            if((cboMedico.SelectedValuePath = "IdMedico")!=null)
-            {
-                txtNMed.Text = cboMedico.SelectedValue.ToString();
-                txtEspecMed.Text = cboMedico.SelectedValue.ToString();
-            }
-            txtEspecialidadeMedico.Text = cboMedico.SelectedItem.ToString();
-        }
-
         private void LoadCombos()
         {
-            listaMedico();
+            ListaMedico();
 
             cboHorario.Items.Add("09:00");
             cboHorario.Items.Add("09:15");
@@ -110,101 +95,87 @@ namespace Agenda_WPF.Views
             cboHorario.Items.Add("11:45");
             cboHorario.Items.Add("14:00");
         }
+        private void cboMedico_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        {
+            if((cboMedico.SelectedValuePath = "IdMedico")!=null)
+            {
+                string valueNMed = "";
+                string valueEspecialidade = "";
+                if (cboMedico.SelectedValue != null)
+                    valueNMed = cboMedico.SelectedValue.ToString();
+                if (cboMedico.SelectedItem != null)
+                    valueEspecialidade = cboMedico.SelectedItem.ToString();
+                txtNMed.Text = valueNMed;
+                txtEspecMed.Text = valueEspecialidade;
+                txtEspecialidadeMedico.Text = valueEspecialidade;
+            }
+        }
         private void LimpaCampos()
         {
-            //    txtNome.IsEnabled = true;
-            //    txtCpf.IsEnabled = true;
-            //    txtRg.IsEnabled = true;
-            //    dtNascimento.IsEnabled = true;
-            //    txtTelefone.IsEnabled = true;
-            //    txtEmail.IsEnabled = true;
-            //    cboPlano.IsEnabled = true;
-            //    txtNumplano.IsEnabled = true;
-            //    txtRua.IsEnabled = true;
-            //    txtNumero.IsEnabled = true;
-            //    txtBairro.IsEnabled = true;
-            //    txtCidade.IsEnabled = true;
-            //    txtEstado.IsEnabled = true;
-            //    txtCep_Leave.IsEnabled = true;
-
-            //dtpDtaAgendamento.DisplayDate = "";
+            txtIdConsulta.Clear();
+            dtpDtaAgendamento.Text = "";
             cboHorario.Text = "";
             txtNomePaciente.Clear();
             txtCpfPaciente.Clear();
             txtPlanoPaciente.Clear();
-            cboMedico.SelectedValue = "";
+            cboMedico.Text = "";
             txtEspecialidadeMedico.Clear();
-
-        //    txtNumplano.Clear();
-        //    txtRua.Clear();
-        //    txtNumero.Clear();
-        //    txtBairro.Clear();
-        //    txtCidade.Clear();
-        //    txtEstado.Clear();
-        //    txtCep_Leave.Clear();
         }
-
-    private void btnCancelar_Click(object sender, RoutedEventArgs e)
+        private void AgendarConsulta()
         {
-            this.AlteraBotoes(1);
-            this.LimpaCampos();
-            frmTelaPrincipalRecepcionista atendente = new frmTelaPrincipalRecepcionista();
-            atendente.ShowDialog();
-        }
-
-        private void btnInserir_Click(object sender, RoutedEventArgs e)
-        {
-            this.operacao = "inserir";
-            this.AlteraBotoes(2);
-        }
-
-        private void btn_Fechar_Click(object sender, RoutedEventArgs e)
-        {
-            this.Close();
-        }
-
-        private void btnListarConsulta_Click(object sender, RoutedEventArgs e)
-        {
-            frmListarAgenda listarAgenda = new frmListarAgenda();
-            listarAgenda.Show();
-        }
-
-        private void btnFechar_Click(object sender, RoutedEventArgs e)
-        {
-            this.Close();
-        }
-
-        private void btnAgendar_Click(object sender, RoutedEventArgs e)
-        {
-
             DateTime data = dtpDtaAgendamento.DisplayDate;
             string hora = cboHorario.Text;
             string plano = txtPlanoPaciente.Text;
             int idMed = (int)cboMedico.SelectedValue;
             int idPac = System.Convert.ToInt32(txtNPac.Text);
-            //int idPlPac = System.Convert.ToInt32(txtPlanoPac.Text);
-            ag.Paciente = PacienteDAO.BuscarPacientePorId(idPac);
-            ag.Cpf = PacienteDAO.BuscarPacientePorId(idPac);
-            ag.Medico = MedicoDAO.BuscarMedicoPorId(idMed);
-            ag.Especialidade = MedicoDAO.BuscarMedicoPorId(idMed);
             ag.DataAgendada = data;
             ag.HoraAgendada = hora;
+            ag.Paciente = PacienteDAO.BuscarPacientePorId(idPac);
+            ag.Cpf = PacienteDAO.BuscarPacientePorId(idPac);
             ag.Plano = plano;
-            
-           string msgCadastrou = AgendaDAO.CadastrarAgenda(ag);
-            if(msgCadastrou == null)
+            ag.Medico = MedicoDAO.BuscarMedicoPorId(idMed);
+            ag.Especialidade = MedicoDAO.BuscarMedicoPorId(idMed);
+
+            string msgCadastrou = AgendaDAO.CadastrarAgenda(ag);
+            if (msgCadastrou == null)
             {
                 ag = new Agenda();
                 MessageBox.Show("Consulta agendada!");
-                LimpaCampos();
+                this.Close();
             }
             else
             {
                 MessageBox.Show(msgCadastrou);
             }
-            int teste=0;
-            
-
+        }
+        private void btnCancelar_Click(object sender, RoutedEventArgs e)
+        {
+            //this.AlteraBotoes(1);
+            this.LimpaCampos();
+            //this.Close();
+        }
+        private void btnInserir_Click(object sender, RoutedEventArgs e)
+        {
+            //this.operacao = "inserir";
+            //this.AlteraBotoes(2);
+        }
+        private void btn_Fechar_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+        private void btnListarConsulta_Click(object sender, RoutedEventArgs e)
+        {
+            frmListarAgenda listarAgenda = new frmListarAgenda();
+            listarAgenda.Show();
+        }
+        private void btnFechar_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+        private void btnAgendar_Click(object sender, RoutedEventArgs e)
+        {
+            AgendarConsulta();
+            //LimpaCampos();
         }
 
     }

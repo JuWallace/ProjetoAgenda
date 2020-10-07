@@ -1,4 +1,5 @@
 ﻿using Agenda_WPF.Model;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -7,7 +8,6 @@ namespace Agenda_WPF.DAL
     class PacienteDAO
     {
         private static Context ctx = SingletonContext.GetInstance();
-
         public static bool CadastrarPaciente(Paciente p)
         {
             if (BuscarPacientePorNome(p) == null)
@@ -28,6 +28,15 @@ namespace Agenda_WPF.DAL
         {
             ctx.Pacientes.Update(p);
             ctx.SaveChanges();
+        }
+
+        public static void Remover(Paciente p)
+        {
+            ctx.Agendas.RemoveRange(ctx.Agendas.Where(x => x.Paciente.IdPaciente == p.IdPaciente));
+            ctx.Prontuarios.RemoveRange(ctx.Prontuarios.Where(x => x.NomePaciente.IdPaciente == p.IdPaciente));
+            ctx.Entry(p).State = EntityState.Deleted;
+            ctx.SaveChanges();
+           
         }
 
     }
