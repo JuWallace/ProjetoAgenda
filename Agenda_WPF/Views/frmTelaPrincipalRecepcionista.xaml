@@ -27,7 +27,7 @@
         </StackPanel>
 
         <TextBox x:Name="txtDta" Text="{Binding ElementName=CalSet, Path=SelectedDate, StringFormat=dd/MM/yyyy}" 
-                   HorizontalAlignment="Left" Margin="734,649,0,0" VerticalAlignment="Top" Visibility="Visible"
+                   HorizontalAlignment="Left" Margin="734,649,0,0" VerticalAlignment="Top" Visibility="Hidden"
                    Height="25" Width="150" TextChanged="txtDta_TextChanged"/>
 
 

@@ -32,8 +32,8 @@ namespace Agenda_WPF.DAL
 
         public static void Remover(Paciente p)
         {
-            ctx.Agendas.RemoveRange(ctx.Agendas.Where(x => x.Paciente.IdPaciente == p.IdPaciente));
-            ctx.Prontuarios.RemoveRange(ctx.Prontuarios.Where(x => x.NomePaciente.IdPaciente == p.IdPaciente));
+            ctx.Agendas.RemoveRange(ctx.Agendas.Where(x => x.Paciente.IdPaciente.Equals(p.IdPaciente)));
+            ctx.Prontuarios.RemoveRange(ctx.Prontuarios.Where(x => x.NomePaciente.IdPaciente.Equals(p.IdPaciente)));
             ctx.Entry(p).State = EntityState.Deleted;
             ctx.SaveChanges();
            

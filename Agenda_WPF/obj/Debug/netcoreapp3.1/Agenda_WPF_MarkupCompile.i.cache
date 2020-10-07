@@ -16,5 +16,5 @@ D:\Repos_GitHub\ProjetoAgenda\Agenda_WPF\App.xaml
 225-1319253441
 Views\frmAgenda.xaml;Views\frmCadastrarMedico.xaml;Views\frmCadastrarPaciente.xaml;Views\frmCadastrarPlanoSaude.xaml;Views\frmCadastrarProcedimento.xaml;Views\frmCadastrarProntuario.xaml;Views\frmCadastrarUsuario.xaml;Views\frmListarAgenda.xaml;Views\frmListarMedico.xaml;Views\frmListarPaciente.xaml;Views\frmListarProntuario.xaml;Views\frmListarUsuario.xaml;Views\frmLogin.xaml;Views\frmProntuario.xaml;Views\frmTelaPrincipalAdm.xaml;Views\frmTelaPrincipalMedico.xaml;Views\frmTelaPrincipalRecepcionista.xaml;Views\MainWindow.xaml;
 
-False
+True
 

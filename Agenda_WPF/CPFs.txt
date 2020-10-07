@@ -38,4 +38,3 @@ Fornecedor3 - 96.047.643/0001-60
 
 
 
-<Button Name="btnSalvar" Content="Salvar" HorizontalAlignment="Left" Margin="678,581,0,0" VerticalAlignment="Top" Width="80" Click="btnSalvar_Click_1"/>

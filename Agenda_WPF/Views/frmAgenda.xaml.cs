@@ -12,6 +12,8 @@ namespace Agenda_WPF.Views
     public partial class frmAgenda : Window
     {
         Agenda ag = new Agenda();
+
+        //======== INÍCIO DOS CONSTRUTORES =============
         public string dtaAgendamento
         {
             set { dtpDtaAgendamento.Text = value; }
@@ -39,12 +41,15 @@ namespace Agenda_WPF.Views
         {
             set { txtPlanoPaciente.Text = value; }
         }
+
+        //======== FIM DOS CONSTRUTORES =============
         public frmAgenda()
         {
             InitializeComponent();
             LoadCombos();
         }
 
+        //======== INÍCIO DOS METODOS =============
         private void AlteraBotoes(int op)
         {
             btnAgendar.IsEnabled = false;
@@ -127,7 +132,7 @@ namespace Agenda_WPF.Views
             string hora = cboHorario.Text;
             string plano = txtPlanoPaciente.Text;
             int idMed = (int)cboMedico.SelectedValue;
-            int idPac = System.Convert.ToInt32(txtNPac.Text);
+            int idPac = Convert.ToInt32(txtNPac.Text);
             ag.DataAgendada = data;
             ag.HoraAgendada = hora;
             ag.Paciente = PacienteDAO.BuscarPacientePorId(idPac);
@@ -148,26 +153,9 @@ namespace Agenda_WPF.Views
                 MessageBox.Show(msgCadastrou);
             }
         }
-        private void btnCancelar_Click(object sender, RoutedEventArgs e)
-        {
-            //this.AlteraBotoes(1);
-            this.LimpaCampos();
-            //this.Close();
-        }
-        private void btnInserir_Click(object sender, RoutedEventArgs e)
-        {
-            //this.operacao = "inserir";
-            //this.AlteraBotoes(2);
-        }
-        private void btn_Fechar_Click(object sender, RoutedEventArgs e)
-        {
-            this.Close();
-        }
-        private void btnListarConsulta_Click(object sender, RoutedEventArgs e)
-        {
-            frmListarAgenda listarAgenda = new frmListarAgenda();
-            listarAgenda.Show();
-        }
+
+        //======== FIM DOS METODOS =============
+
         private void btnFechar_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
@@ -177,6 +165,33 @@ namespace Agenda_WPF.Views
             AgendarConsulta();
             //LimpaCampos();
         }
+        private void btnListarConsulta_Click(object sender, RoutedEventArgs e)
+        {
+            frmListarAgenda listarAgenda = new frmListarAgenda();
+            listarAgenda.Show();
+        }
+        
+        
 
+        private void btnAlterar_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnLocalizar_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnExcluir_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void btnCancelar_Click(object sender, RoutedEventArgs e)
+        {
+            //this.AlteraBotoes(1);
+            LimpaCampos();
+            //this.Close();
+        }
     }
 }

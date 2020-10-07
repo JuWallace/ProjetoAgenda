@@ -13,13 +13,10 @@ namespace Agenda_WPF.DAL
 
         public static List<Agenda> ListarAgendas()
             => ctx.Agendas.ToList();
-
         public static Agenda BuscarPacientePorId(int id)
             => ctx.Agendas.Find(id);
-
         public static Agenda BuscarAgendaPorNome(Agenda a)
             => ctx.Agendas.FirstOrDefault (x => x.Paciente.Equals(a.Paciente));
-
         public static Agenda BuscarAgendaPorData(Agenda a)
             => ctx.Agendas.FirstOrDefault(x => x.DataAgendada.Equals(a.DataAgendada) &&
                  x.HoraAgendada.Equals(a.HoraAgendada) && x.Paciente.Equals(a.Paciente));

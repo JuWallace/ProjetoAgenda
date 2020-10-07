@@ -21,14 +21,19 @@
             <Button Name="btn_Fechar" Content="Fechar" HorizontalContentAlignment="Center" Height="30" DockPanel.Dock="Top" Click="btn_Fechar_Click"/>
 
         </DockPanel>
-        <DataGrid Name="dtgMedicos" Margin="213,99,30,102">
-            <!--
+        <DataGrid Name="dtgMedicos" AutoGenerateColumns="False" Margin="213,99,30,102">
             <DataGrid.Columns>
-                <DataGridTextColumn Binding="{Binding Nome}" Header="Nome do cliente"/>
-                <DataGridTextColumn Binding="{Binding Telefone}" Header="Telefone"/>
-                <DataGridTextColumn Binding="{Binding Email}" Header="E-mail"/>
+                <DataGridTextColumn Header="Nome Médico" Width="1*"
+                                    Binding="{Binding Nome}"/>
+                <DataGridTextColumn Header="CRM" Width="1*"
+                                    Binding="{Binding Crm}"/>
+                <DataGridTextColumn Header="Telefone" Width="1*"
+                                    Binding="{Binding Telefone}"/>
+                <DataGridTextColumn Header="E-mail" Width="1*"
+                                    Binding="{Binding Email}"/>
+                <DataGridTextColumn Header="Plano" Width="1*"
+                                    Binding="{Binding NomePlano}"/>
             </DataGrid.Columns>
-            -->
 
         </DataGrid>
 

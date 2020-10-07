@@ -39,9 +39,9 @@
         <DataGrid Name="dtgAgenda" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="222,220,0,0" Height="387" Width="768"/>
 
         <Button Name="btnAgendar" Content="Agendar" HorizontalAlignment="Left" Margin="246,631,0,0" VerticalAlignment="Top" Width="90" Click="btnAgendar_Click"/>
-        <Button Name="btnAlterar" Content="Alterar" HorizontalAlignment="Left" Margin="346,631,0,0" VerticalAlignment="Top" Width="90"/>
-        <Button Name="btnLocalizar" Content="Localizar" HorizontalAlignment="Left" Margin="446,631,0,0" VerticalAlignment="Top" Width="90"/>
-        <Button Name="btnExcluir" Content="Excluir" HorizontalAlignment="Left" Margin="548,631,0,0" VerticalAlignment="Top" Width="90"/>
+        <Button Name="btnAlterar" Content="Alterar" HorizontalAlignment="Left" Margin="346,631,0,0" VerticalAlignment="Top" Width="90" Click="btnAlterar_Click"/>
+        <Button Name="btnLocalizar" Content="Localizar" HorizontalAlignment="Left" Margin="446,631,0,0" VerticalAlignment="Top" Width="90" Click="btnLocalizar_Click"/>
+        <Button Name="btnExcluir" Content="Excluir" HorizontalAlignment="Left" Margin="548,631,0,0" VerticalAlignment="Top" Width="90" Click="btnExcluir_Click"/>
         <Button Name="btnCancelar" Content="Cancelar" HorizontalAlignment="Left" Margin="652,631,0,0" VerticalAlignment="Top" Width="90" Click="btnCancelar_Click"/>
         <TextBox Name="txtNPac" Visibility="Hidden" HorizontalAlignment="Left" Margin="277,95,0,0" Text="id"  TextWrapping="Wrap" VerticalAlignment="Top" Width="24"/>
         <TextBox Name="txtCpfPac" Visibility="Hidden" HorizontalAlignment="Left" Margin="566,95,0,0" Text="id" TextWrapping="Wrap" VerticalAlignment="Top" Width="24"/>

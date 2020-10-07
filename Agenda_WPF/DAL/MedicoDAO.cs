@@ -10,8 +10,6 @@ namespace Agenda_WPF.DAL
     class MedicoDAO
     {
         private static Context ctx = SingletonContext.GetInstance();
-        //Medico m = new Medico();
-
         public static bool CadastrarMedico(Medico m)
         {
             if (BuscarMedicoPorNome(m) == null)
@@ -33,6 +31,14 @@ namespace Agenda_WPF.DAL
         {
                 ctx.Medicos.Update(m);
                 ctx.SaveChanges();
+        }
+
+        public static void Remover(Medico m)
+        {
+            ctx.Agendas.RemoveRange(ctx.Agendas.Where(x => x.Medico.IdMedico.Equals(m.IdMedico)));
+            ctx.Prontuarios.RemoveRange(ctx.Prontuarios.Where(x => x.NomeMedico.IdMedico.Equals(m.IdMedico)));
+            ctx.Entry(m).State = EntityState.Deleted;
+            ctx.SaveChanges();
         }
     }
 }
