@@ -8,6 +8,8 @@ namespace Agenda_WPF.Model
         public string Rg { get; set; }
         public string Nascimento { get; set; }
         public string Telefone { get; set; }
+        public string Celular { get; set; }
+        public string Peso { get; set; }
         public string Email { get; set; }
         public string Cep { get; set; }
         public string Rua { get; set; }

@@ -1,6 +1,4 @@
 ﻿using Agenda_WPF.Views;
-using NewAgenda_WPF.Views;
-using System;
 using System.Windows;
 
 namespace Agenda_WPF
@@ -25,7 +23,6 @@ namespace Agenda_WPF
         {
             
         }
-
 
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)

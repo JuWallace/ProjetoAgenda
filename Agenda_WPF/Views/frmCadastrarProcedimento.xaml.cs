@@ -4,7 +4,7 @@ using System;
 using System.Windows;
 
 
-namespace NewAgenda_WPF.Views
+namespace Agenda_WPF.Views
 {
     /// <summary>
     /// Interaction logic for frmCadastrarProcedimento.xaml

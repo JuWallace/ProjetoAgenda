@@ -107,8 +107,9 @@ namespace Agenda_WPF.Views
 
         private void btnCancelar_Click(object sender, RoutedEventArgs e)
         {
-            this.AlteraBotoes(1);
-            this.LimpaCampos();
+            //this.AlteraBotoes(1);
+            //this.LimpaCampos();
+            this.Close();
         }
 
         private void btnInserir_Click(object sender, RoutedEventArgs e)

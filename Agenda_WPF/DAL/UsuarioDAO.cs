@@ -9,12 +9,12 @@ namespace Agenda_WPF.DAL
     {
         private static Context ctx = SingletonContext.GetInstance();
         public static List<Usuario> ListarUsuarios() => ctx.Usuarios.ToList();
-        public static Usuario BuscarUsuarioPorCpf(string cpf) => ctx.Usuarios.FirstOrDefault(x => x.Cpf.Equals(cpf));
-        public static Usuario BuscarUsuarioPorNome(string nome) => ctx.Usuarios.FirstOrDefault(x => x.Nome.Equals(nome));
+        public static Usuario BuscarUsuarioPorCpf(Usuario cpf) => ctx.Usuarios.FirstOrDefault(x => x.Cpf.Equals(cpf.Cpf));
+        public static Usuario BuscarUsuarioPorNome(Usuario nome) => ctx.Usuarios.FirstOrDefault(x => x.Nome.Equals(nome.Nome));
 
         public static bool CadastrarUsuario(Usuario usr)
         {
-            if (BuscarUsuarioPorCpf(usr.Cpf) == null)
+            if (BuscarUsuarioPorCpf(usr) == null)
             {
                 ctx.Usuarios.Add(usr);
                 ctx.SaveChanges();

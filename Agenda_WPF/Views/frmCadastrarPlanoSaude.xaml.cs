@@ -2,7 +2,7 @@
 using Agenda_WPF.Model;
 using System.Windows;
 
-namespace NewAgenda_WPF.Views
+namespace Agenda_WPF.Views
 {
     /// <summary>
     /// Interaction logic for frmCadastrarPlanoSaude.xaml

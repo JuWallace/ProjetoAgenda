@@ -1,5 +1,6 @@
 ﻿using Agenda_WPF.DAL;
 using Agenda_WPF.Model;
+using Agenda_WPF.Utils;
 using System.Windows;
 
 
@@ -27,7 +28,7 @@ namespace Agenda_WPF.Views
             {
                 MessageBox.Show($"Informe um LOGIN válido!");
             }
-            else if (usr.Email == txtEmailLogin.Text && usr.Senha == pwdSenhaLogin.Password)
+            else if (usr.Email == txtEmailLogin.Text && usr.Senha == Encrypta.GetMD5(pwdSenhaLogin.Password))
             {
                 if (usr.Administrador == true)
                 {

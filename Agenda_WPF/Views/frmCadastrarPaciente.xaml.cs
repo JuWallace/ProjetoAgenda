@@ -73,6 +73,8 @@ namespace Agenda_WPF.Views
             txtRg.Clear();
             mskdtaNascimento.Clear();
             mskTelefone.Clear();
+            mskCelular.Clear();
+            txtPeso.Clear();
             txtEmail.Clear();
             cboPlano.SelectedIndex = -1;
             txtNPlano.Clear();
@@ -107,6 +109,8 @@ namespace Agenda_WPF.Views
                         txtRg.Text = pac.Rg;
                         mskdtaNascimento.Text = pac.Nascimento;
                         mskTelefone.Text = pac.Telefone;
+                        mskCelular.Text = pac.Celular;
+                        txtPeso.Text = pac.Peso;
                         txtEmail.Text = pac.Email;
                         mskCep_Leave.Text = pac.Cep;
                         txtRua.Text = pac.Rua;
@@ -174,6 +178,8 @@ namespace Agenda_WPF.Views
             pac.Rg = txtRg.Text;
             pac.Nascimento = mskdtaNascimento.Text;
             pac.Telefone = mskTelefone.Text;
+            pac.Celular = mskCelular.Text;
+            pac.Peso = txtPeso.Text;
             pac.Email = txtEmail.Text;
             pac.Rua = txtRua.Text;
             pac.Numero = txtNumero.Text;
@@ -229,6 +235,8 @@ namespace Agenda_WPF.Views
                 pa.Rg = txtRg.Text;
                 pa.Nascimento = mskdtaNascimento.Text;
                 pa.Telefone = mskTelefone.Text;
+                pa.Celular = mskCelular.Text;
+                pa.Peso = txtPeso.Text;
                 pa.Email = txtEmail.Text;
                 pa.Cep = mskCep_Leave.Text;
                 pa.Rua = txtRua.Text;
@@ -288,8 +296,8 @@ namespace Agenda_WPF.Views
         }
         private void btnFechar_Click(object sender, RoutedEventArgs e)
         {
-            frmTelaPrincipalRecepcionista atendente = new frmTelaPrincipalRecepcionista();
-            atendente.ShowDialog();
+            //frmTelaPrincipalRecepcionista atendente = new frmTelaPrincipalRecepcionista();
+            //atendente.ShowDialog();
             this.Close();
         }
         private void btnAgendarConsulta_Click(object sender, RoutedEventArgs e)

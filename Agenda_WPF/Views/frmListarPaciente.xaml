@@ -27,6 +27,10 @@
                                     Binding="{Binding Nome}"/>
                 <DataGridTextColumn Header="Telefone" Width="1*"
                                     Binding="{Binding Telefone}"/>
+                <DataGridTextColumn Header="Celular" Width="1*"
+                                    Binding="{Binding Celular}"/>
+                <DataGridTextColumn Header="Peso" Width="1*"
+                                    Binding="{Binding Peso}"/>
                 <DataGridTextColumn Header="E-mail" Width="1*"
                                     Binding="{Binding Email}"/>
                 <DataGridTextColumn Header="Plano" Width="1*"
